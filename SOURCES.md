@@ -81,6 +81,10 @@
 | `data/processed/risk_edges.csv` | 结构化数据 | Gephi 边表 | 本地生成，不纳入公开仓库 |
 | `outputs/gephi/china_railway_risk_network.gexf` | 图谱文件 | Gephi 可导入风险图谱 | 本地生成，不纳入公开仓库 |
 | `docs/RISK_NETWORK_PREVIEW.md` | 公开摘要 | 展示官方披露种子网络的节点、边和加权度预览 | 已生成 |
+| `scripts/build_report_figures.py` | Python 脚本 | 生成财务趋势、文本风险热力图、风险词和风险矩阵图 | 已运行 |
+| `outputs/figures/*.png` | 本地图表 | 报告插图本地副本 | 本地生成，不纳入公开仓库 |
+| `docs/assets/figures/*.png` | 公开图表 | GitHub Pages 可展示图表 | 已生成 |
+| `docs/FIGURES_CATALOG.md` | 公开摘要 | 展示图表用途、预览和解释边界 | 已生成 |
 
 ## 来源使用原则
 

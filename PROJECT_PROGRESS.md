@@ -195,3 +195,23 @@
   - 人工核验并补充裁判文书、执行信息和企业风险平台样本。
   - 用新增事件样本重新计算图谱中心性和社群结构。
   - 生成财务指标趋势图、文本风险热力图和风险矩阵图。
+
+## 2026-06-29 报告图表素材生成
+
+- 操作者：Codex
+- 目标：将财务指标、文本风险指标和官方风险事件样本转成报告可用图表。
+- 已完成：
+  - 新增 `scripts/build_report_figures.py`。
+  - 生成财务趋势图、文本风险热力图、2025 年高权重风险词图和官方事件风险矩阵图。
+  - 本地图表副本输出到 `outputs/figures/`。
+  - GitHub Pages 图表输出到 `docs/assets/figures/`。
+  - 生成公开图表目录 `docs/FIGURES_CATALOG.md`。
+  - 更新 README、GitHub Pages 首页、`SOURCES.md` 和 `EVIDENCE_MATRIX.md`。
+- 验证：
+  - `python .\scripts\build_report_figures.py` 成功生成 4 张 PNG 和图表目录。
+  - 已检查财务趋势图、文本热力图、风险词条图和风险矩阵图，中文字体正常，矩阵标签已做错位处理。
+  - `python -m py_compile`、`git diff --check` 和临时公开目录 preflight 均通过。
+- 下一步：
+  - 将图表结论写入 `paper/draft.md` 的实证分析段落。
+  - 补充司法、执行和企业风险样本后重跑风险矩阵与图谱。
+  - 准备模型特征表和机器学习预警样本设计。
