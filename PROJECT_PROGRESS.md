@@ -34,3 +34,19 @@
 - 隐私检查：
   - 未发现常见密钥、GitHub token、邮箱、手机号等敏感字符串。
   - 原始课程材料保留在本地，不纳入公开仓库。
+
+## 2026-06-29 GitHub 发布完成
+
+- 操作者：Codex
+- 目标：创建公开 GitHub 仓库、推送项目并启用 GitHub Pages。
+- 已完成：
+  - 初始化 Git 仓库并创建首个提交：`docs: scaffold financial risk analysis project`。
+  - 创建公开仓库：`https://github.com/wzgig/china-railway-financial-risk-analysis`。
+  - 推送 `main` 分支到远程 `origin`。
+  - 设置仓库主页：`https://wzgig.github.io/china-railway-financial-risk-analysis/`。
+  - 配置 GitHub Pages 从 `main` 分支的 `/docs` 目录发布。
+  - 设置仓库 topics：`financial-risk`、`china-railway`、`gephi`、`machine-learning`、`text-mining`、`course-project`。
+- 验证：
+  - `git diff --cached --check` 通过。
+  - GitHub Pages API 返回 `source.branch=main`、`source.path=/docs`、`https_enforced=true`。
+  - Pages 发布状态在配置后进入 `building`。
