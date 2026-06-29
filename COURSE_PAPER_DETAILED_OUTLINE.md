@@ -78,6 +78,8 @@
 4. 网络缓冲能力。
 5. 综合评分与管理启示。
 
+当前已完成：`scripts/build_resilience_model.py` 已生成 2021-2025 年四维缓冲能力评分、2025 年雷达图、年度趋势图和 `docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md`，报告草稿已在 6.5 节写入弹性风险管理模型。
+
 ## 8 风险管理建议
 
 1. 强化应收账款和合同资产全周期管理。

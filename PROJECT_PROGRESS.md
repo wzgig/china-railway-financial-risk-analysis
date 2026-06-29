@@ -357,3 +357,34 @@
 - 下一步：
   - 视时间补充弹性风险管理模型或模型图表。
   - 准备最终 Word/PDF 版和 3 分钟视频素材。
+
+## 2026-06-29 弹性风险管理模型补充
+
+- 操作者：Codex
+- 用户要求：
+  - 继续补充弹性风险管理模型。
+  - 回顾完整流程是否已经满足期末任务要求，并判断还有哪些值得提升的地方。
+- 已完成：
+  - 新增 `scripts/build_resilience_model.py`，基于财务指标、年度事件特征和风险图谱中心性构建四维风险缓冲能力评分。
+  - 生成本地评分表 `data/processed/resilience_scores.csv` 和报告表格副本 `outputs/tables/resilience_scores.csv`。
+  - 生成 GitHub Pages 图表 `docs/assets/figures/resilience_radar_2025.png` 和 `docs/assets/figures/resilience_score_trend.png`。
+  - 生成公开说明 `docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md`，说明模型定位、评分口径、年度结果、管理动作映射和解释边界。
+  - 更新 `paper/draft.md`，新增 6.5 节“弹性风险管理模型”，并同步摘要、管理建议、结论和局限性。
+  - 更新 README、GitHub Pages 首页、图表目录、数据字典、来源清单、证据矩阵、脚本说明、详细大纲、任务计划和完成度审计。
+- 主要结果：
+  - 四维模型包括财务缓冲、经营缓冲、治理信用缓冲和网络韧性。
+  - 2025 年综合韧性得分为 33.1，等级为“低位修复”；治理信用缓冲较强，但经营缓冲和财务缓冲是主要短板。
+  - 审计文件中，选做“弹性风险管理模型”已由未完成更新为基本完成，完成度 80%。
+- 当前流程判断：
+  - 必做方法链条已经基本闭环：经营机制、风险事件、Gephi 图谱、文本风险指标、Word2Vec 扩词、机器学习预警和完整 Markdown 草稿均已完成。
+  - 选做弹性模型已经基本完成。
+  - 仍未达到最终提交状态，主要缺口是 Word/PDF 格式化、3 分钟视频成片，以及执行/企查查候选样本的进一步人工复核。
+- 验证：
+  - `python -m py_compile` 覆盖 15 个脚本并通过。
+  - `python .\scripts\build_resilience_model.py` 成功生成评分表、雷达图、趋势图和公开说明。
+  - `git -c core.longpaths=true diff --check` 通过，仅有 Windows 换行提示。
+  - 使用 `course-paper-workflow` preflight 在临时公开目录运行，剩余 2 个误报：均为巨潮资讯 PDF URL 中的长数字文件编号 `1225056518`，不是个人信息。
+- 下一步：
+  - 生成最终 Word/PDF，并按模板做格式检查。
+  - 编写 3 分钟视频旁白稿、素材清单并制作成片。
+  - 继续对 `candidate` 和 `verify` 外部样本做人工复核、去重和留痕。

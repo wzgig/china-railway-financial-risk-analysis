@@ -25,6 +25,7 @@ description: 风险图谱、文本指标与机器学习预警的课程项目规�
   -> 风险图谱构建
   -> 文本风险指标
   -> 财务风险预警模型
+  -> 弹性风险管理评分
   -> 报告与视频展示
 ```
 
@@ -46,6 +47,7 @@ description: 风险图谱、文本指标与机器学习预警的课程项目规�
 - [机器学习预警特征表](MODEL_FEATURE_TABLE.md)
 - [同业财务面板](PEER_FINANCIAL_PANEL.md)
 - [财务风险预警基线模型](FINANCIAL_WARNING_MODEL.md)
+- [弹性风险管理模型](RESILIENCE_RISK_MANAGEMENT_MODEL.md)
 - [图表目录](FIGURES_CATALOG.md)
 - [格式模板提取记录](FORMAT_TEMPLATE_NOTES.md)
 - [风险指标框架](RISK_INDICATOR_FRAMEWORK.md)

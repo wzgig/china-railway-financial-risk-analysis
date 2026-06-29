@@ -13,7 +13,8 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 3. 风险图谱：构造“主体-子公司-地区-风险事件-风险类别-时间”的网络，导出 Gephi 可读文件并识别风险传导路径。
 4. 文本风险指标：以年报、公告、裁判文书、风险事件文本为语料，用种子词和 Word2Vec 扩充风险词典，用 jieba 计算词频权重。
 5. 财务风险预警：将财务指标、文本风险指标和事件风险指标合并，训练机器学习模型并解释关键变量。
-6. 视频展示：用 3 分钟讲清“风险传导 -> 风险评估 -> 风险预警”的流程、图谱和结论。
+6. 弹性风险管理：从财务缓冲、经营缓冲、治理信用缓冲和网络韧性判别风险缓冲能力。
+7. 视频展示：用 3 分钟讲清“风险传导 -> 风险评估 -> 风险预警”的流程、图谱和结论。
 
 ## 目录结构
 
@@ -67,6 +68,7 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 - 机器学习预警特征表：[docs/MODEL_FEATURE_TABLE.md](docs/MODEL_FEATURE_TABLE.md)
 - 同业财务面板：[docs/PEER_FINANCIAL_PANEL.md](docs/PEER_FINANCIAL_PANEL.md)
 - 财务风险预警基线模型：[docs/FINANCIAL_WARNING_MODEL.md](docs/FINANCIAL_WARNING_MODEL.md)
+- 弹性风险管理模型：[docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md](docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md)
 - 图表目录：[docs/FIGURES_CATALOG.md](docs/FIGURES_CATALOG.md)
 - 格式模板提取记录：[docs/FORMAT_TEMPLATE_NOTES.md](docs/FORMAT_TEMPLATE_NOTES.md)
 

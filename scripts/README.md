@@ -30,6 +30,7 @@
 | `build_warning_model_features.py` | 生成机器学习预警模型年度特征表和规则标签 | `data/processed/model_features_china_railway.csv`、`docs/MODEL_FEATURE_TABLE.md` |
 | `collect_peer_financial_panel.py` | 采集同业建筑上市公司 2021-2025 年财务面板 | `data/processed/peer_financial_panel.csv`、`docs/PEER_FINANCIAL_PANEL.md` |
 | `train_financial_warning_model.py` | 训练 Logistic Regression 和 Random Forest 财务预警基线模型 | `outputs/models/`、`outputs/tables/`、`docs/FINANCIAL_WARNING_MODEL.md` |
+| `build_resilience_model.py` | 构建弹性风险管理四维评分、雷达图和趋势图 | `data/processed/resilience_scores.csv`、`outputs/tables/resilience_scores.csv`、`docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md` |
 
 ## 开发规则
 

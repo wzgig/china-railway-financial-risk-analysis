@@ -115,3 +115,17 @@
 | financial_pressure_label_next_year | int | 下一年度财务压力规则标签 |
 | label_rule_score | int | 触发压力规则数量 |
 | label_reason | string | 标签触发原因 |
+
+## `resilience_scores.csv`
+
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| year | int | 评分年份 |
+| financial_buffer_score | float | 财务缓冲得分，综合现金流、杠杆和利息覆盖能力 |
+| operating_buffer_score | float | 经营缓冲得分，综合收入利润增长、应收账款和合同资产占用 |
+| governance_credit_buffer_score | float | 治理信用缓冲得分，综合信用支持、严重事件、诉讼执行金额、合规事件和证据不确定性 |
+| network_resilience_score | float | 网络韧性得分，综合事件数量、严重事件数量和年份节点中心性 |
+| composite_resilience_score | float | 四维缓冲能力综合得分，0-100 分，越高表示样本期相对缓冲能力越强 |
+| resilience_level | string | 韧性等级，如较强缓冲、中等偏强、承压可控、重点修复、低位修复 |
+| weakest_dimension | string | 当年得分最低的缓冲维度 |
+| priority_action | string | 与最弱维度对应的优先管理动作 |

@@ -26,6 +26,7 @@
 | E022 | peer-financial-panel | 本地数据集 | 2026 | `docs/PEER_FINANCIAL_PANEL.md` | 11 家建筑工程类 A 股上市公司 | 东方财富 HSF10 财务分析接口、2021-2025 年报指标 | 形成 55 条同业年度财务记录；2025 年样本均值显示营收和归母净利润承压 | 二级财经数据源，终稿关键结论应抽样年报核验 | 同业面板和机器学习样本 | 数据来源、模型设计 | candidate |
 | E023 | financial-warning-model | 本地模型输出 | 2026 | `docs/FINANCIAL_WARNING_MODEL.md` | 44 条同业监督学习样本、中国中铁预测 | Logistic Regression、Random Forest、时间切分、下一年压力标签 | 两类模型测试集 F1 均为 0.8235；中国中铁 2025 特征对应 2026 前瞻压力概率较高 | 测试集仅 11 条，标签为规则构造，不等同违约或评级下调 | 机器学习财务风险预警 | 实证结果、结论 | core |
 | E024 | risk-network-centrality | 本地图谱 | 2026 | `docs/RISK_NETWORK_CENTRALITY.md` | 合并风险事件图谱 | NetworkX 中心性、Louvain 社群、增强 GEXF、报告导图 | 图谱包含 77 节点、133 边；合规和流动性风险为核心风险类型，母公司、2023 年和若干执行/诉讼事件具有较高中介作用 | 候选和待复核样本会影响中心性排序，结果用于课程风险线索解释 | Gephi 导图、中心性解释、风险传导路径 | 实证结果、风险管理建议 | core |
+| E025 | resilience-risk-management-model | 本地模型输出 | 2026 | `docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md` | 中国中铁 2021-2025 年年度观测 | 财务缓冲、经营缓冲、治理信用缓冲、网络韧性四维相对评分 | 2025 年综合韧性得分 33.1，治理信用缓冲较强但经营缓冲和财务缓冲处于低位修复区间 | 样本期相对评分，不等同违约概率、信用评级或内部压力测试 | 弹性风险管理模型和缓冲能力判断 | 实证结果、管理建议、结论 | core |
 
 ## 后续补充字段建议
 

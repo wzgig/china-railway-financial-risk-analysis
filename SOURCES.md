@@ -134,6 +134,17 @@
 | `outputs/tables/warning_model_*.csv` | 评估表 | 模型指标和特征重要性 | 本地生成，不纳入公开仓库 |
 | `docs/FINANCIAL_WARNING_MODEL.md` | 公开摘要 | 展示模型设计、测试集表现、特征重要性和中国中铁预测结果 | 已生成 |
 
+## 本轮新增弹性风险管理模型产物
+
+| 文件 | 类型 | 用途 | 状态 |
+|---|---|---|---|
+| `scripts/build_resilience_model.py` | Python 脚本 | 基于财务指标、年度事件特征和风险图谱中心性构建四维风险缓冲能力评分 | 已运行 |
+| `data/processed/resilience_scores.csv` | 处理后数据 | 中国中铁 2021-2025 年财务缓冲、经营缓冲、治理信用缓冲、网络韧性和综合韧性评分 | 本地生成，不纳入公开仓库 |
+| `outputs/tables/resilience_scores.csv` | 报告表格 | 弹性风险管理模型评分表副本 | 本地生成，不纳入公开仓库 |
+| `docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md` | 公开摘要 | 展示模型定位、评分口径、年度结果、图表和管理动作映射 | 已生成 |
+| `docs/assets/figures/resilience_radar_2025.png` | 公开图表 | 展示 2025 年四维风险缓冲能力雷达图 | 已生成 |
+| `docs/assets/figures/resilience_score_trend.png` | 公开图表 | 展示 2021-2025 年综合韧性和分维度趋势 | 已生成 |
+
 ## 来源使用原则
 
 1. 优先使用官方披露和可复核文件。
