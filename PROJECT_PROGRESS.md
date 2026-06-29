@@ -215,3 +215,36 @@
   - 将图表结论写入 `paper/draft.md` 的实证分析段落。
   - 补充司法、执行和企业风险样本后重跑风险矩阵与图谱。
   - 准备模型特征表和机器学习预警样本设计。
+
+## 2026-06-29 完成度回顾与 Word2Vec 扩词补强
+
+- 操作者：Codex
+- 用户要求：
+  - 回顾目前所有工作，判断是否已经完成期末任务要求。
+  - 若当前阶段未完全完成，则对目前工作进行提升。
+- 完成度判断：
+  - 当前项目可作为阶段性过程材料提交，但还不能作为完整期末作业提交。
+  - 已完成前期准备、官方数据整理、参考文献、文本种子指标、官方风险事件种子、图谱预览和报告图表。
+  - 仍缺机器学习预警模型、司法/执行/企查查扩展样本、最终 Word/PDF 和 3 分钟视频。
+- 已完成：
+  - 新增 `COURSE_REQUIREMENTS_AUDIT.md`，逐条审计六项期末任务完成度。
+  - 更新 `PROJECT_REQUIREMENTS.md`，补入截止日期和模板状态，修正早期“截止日期未提供”的过时表述。
+  - 安装并使用 `gensim`，补齐 Word2Vec 扩词能力。
+  - 新增 `scripts/build_word2vec_risk_terms.py`，从 2021-2025 年年报文本训练 Word2Vec 模型。
+  - 生成 `configs/risk_terms_expanded.json`、本地候选词明细和扩展文本风险指数。
+  - 生成公开摘要 `docs/WORD2VEC_RISK_TERMS.md`。
+  - 更新 `paper/draft.md`，加入财务趋势、文本风险、Word2Vec 扩词、官方风险事件矩阵和图谱预览结论。
+  - 更新 README、GitHub Pages 首页、`SOURCES.md` 和 `EVIDENCE_MATRIX.md`。
+- 主要结果：
+  - 年报文本切分得到 26,875 个 Word2Vec 训练句段。
+  - 语义过滤后保留 62 个候选扩展词。
+  - 扩展指数与种子词指数方向一致，仍显示偿债风险、组织传导风险、营运风险和市场风险为高关注类别。
+- 验证：
+  - `python .\scripts\build_word2vec_risk_terms.py` 成功生成扩展词典、候选词明细、扩展文本风险指数和公开摘要。
+  - `python -m py_compile` 覆盖 9 个脚本通过。
+  - `git diff --check` 通过，仅提示 Windows 换行转换。
+  - 临时公开目录 preflight 结果为 `errors=0 warnings=0`。
+- 下一步：
+  - 构建机器学习预警模型和特征重要性结果。
+  - 继续合规补充司法、执行和企业风险样本。
+  - 准备最终 Word/PDF 和 3 分钟视频。

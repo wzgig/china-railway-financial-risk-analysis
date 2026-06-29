@@ -69,6 +69,11 @@
 | `data/processed/text_risk_index_by_year.csv` | 结构化数据 | 年度风险类别综合得分和概率代理得分 | 本地生成，不纳入公开仓库 |
 | `data/processed/text_risk_terms_by_year.csv` | 结构化数据 | 年度高权重风险词、权重和命中次数 | 本地生成，不纳入公开仓库 |
 | `docs/TEXT_RISK_INDEX.md` | 公开摘要 | 展示文本风险指标计算方法、年度结果和解释边界 | 已生成 |
+| `scripts/build_word2vec_risk_terms.py` | Python 脚本 | 训练年报 Word2Vec 模型，扩充风险词典并计算扩展文本风险指数 | 已运行 |
+| `configs/risk_terms_expanded.json` | 配置文件 | 种子词与 Word2Vec 候选扩展词合并后的风险词典 | 已创建 |
+| `data/processed/word2vec_risk_terms.csv` | 结构化数据 | Word2Vec 候选扩展词、来源种子词、相似度和语料命中次数 | 本地生成，不纳入公开仓库 |
+| `data/processed/text_risk_index_word2vec_by_year.csv` | 结构化数据 | 扩展词典年度风险类别得分 | 本地生成，不纳入公开仓库 |
+| `docs/WORD2VEC_RISK_TERMS.md` | 公开摘要 | 展示 Word2Vec 扩词方法、候选词和扩展文本风险指数 | 已生成 |
 | `configs/risk_event_schema.json` | 配置文件 | 风险事件字段、事件类型、风险类型和合规边界 | 已创建 |
 | `scripts/create_risk_event_template.py` | Python 脚本 | 生成司法、执行、企查查和公告风险事件采集模板 | 已运行 |
 | `data/interim/risk_event_collection_template.csv` | 中间模板 | 风险事件人工或合法导出数据的标准录入表 | 本地生成，不纳入公开仓库 |
