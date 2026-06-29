@@ -91,6 +91,30 @@
 | `docs/assets/figures/*.png` | 公开图表 | GitHub Pages 可展示图表 | 已生成 |
 | `docs/FIGURES_CATALOG.md` | 公开摘要 | 展示图表用途、预览和解释边界 | 已生成 |
 
+## 本轮新增外部风险事件来源
+
+| 编号 | 来源 | 链接 | 用途 | 状态 |
+|---|---|---|---|---|
+| X1 | 上海铁路运输法院民事判决书（2023）沪7101民初230号 | https://www.hshfy.sh.cn/shfy/web/flws2pdf.jsp?pa=adGFoPaOoMjAyM6Opu6Y3MTAxw%2FGz9TIzMLrFJndzeGg9MSZ3c2xiPcPxysLF0L72yukPdcssz | 中铁上海工程局买卖合同纠纷司法样本 | core |
+| X2 | 上海铁路运输法院民事判决书（2023）沪7101民初496号 | https://www.hshfy.sh.cn/shfy/web/flws2pdf.jsp?pa=adGFoPaOoMjAyM6Opu6Y3MTAxw%2FGz9TQ5NrrFJndzeGg9MSZ3c2xiPcPxysLF0L72yukPdcssz | 中铁上海工程局供应链付款司法样本 | core |
+| X3 | 维基文库转载辽宁省朝阳市中级人民法院（2024）辽13民终1533号判决书 | https://zh.wikisource.org/wiki/%E4%B8%AD%E9%93%81%E4%B9%9D%E5%B1%80%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E4%B8%8E%E8%BE%BD%E5%AE%81%E5%8D%8E%E5%B1%95%E5%B8%82%E6%94%BF%E5%B7%A5%E7%A8%8B%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%BB%BA%E8%AE%BE%E5%B7%A5%E7%A8%8B%E6%96%BD%E5%B7%A5%E5%90%88%E5%90%8C%E7%BA%A0%E7%BA%B7%E4%BA%8C%E5%AE%A1%E5%88%A4%E5%86%B3%E4%B9%A6 | 中铁九局建设工程施工合同纠纷样本 | candidate，需原始裁判文书平台复核 |
+| X4 | 每日经济新闻调查报道，转引执行信息和限制消费信息 | https://www.nbd.com.cn/articles/2024-04-10/3321035.html | 中铁广州工程局第三公司、中铁隧道三处、中铁十局二公司执行/限制消费样本 | candidate/verify |
+| X5 | 中国质量新闻网/新浪财经转引中国执行信息公开网 | https://finance.sina.cn/2023-01-31/detail-imyeancp0172215.d.html?vt=4 | 中铁六局路桥新增被执行人样本 | candidate |
+| X6 | 经济参考网/新浪财经转引天眼查 | https://finance.sina.com.cn/stock/relnews/cn/2025-05-09/doc-inevxzxu7563170.shtml | 中铁三局桥隧新增被执行人样本 | candidate |
+| X7 | 财中社转引企查查 | https://m.caizhongshe.cn/article-7332928644422008550.html | 中铁隧道局行政处罚、被执行人和短期新增执行案件汇总样本 | verify |
+
+## 本轮新增脚本和数据产物
+
+| 文件 | 类型 | 用途 | 状态 |
+|---|---|---|---|
+| `scripts/build_external_risk_events.py` | Python 脚本 | 生成司法、执行、企查查扩展样本，并合并官方披露事件 | 已运行 |
+| `data/interim/risk_events_external_sample.csv` | 中间数据 | 11 条外部扩展风险事件样本 | 本地生成，不纳入公开仓库 |
+| `data/processed/risk_events_combined.csv` | 处理后数据 | 28 条合并风险事件，用于图谱和模型特征 | 本地生成，不纳入公开仓库 |
+| `docs/EXTERNAL_RISK_EVENTS_SAMPLE.md` | 公开摘要 | 展示扩展样本来源、证据状态、样本摘要和边界 | 已生成 |
+| `scripts/build_warning_model_features.py` | Python 脚本 | 合并财务、文本和事件特征，生成机器学习预警前置特征表 | 已运行 |
+| `data/processed/model_features_china_railway.csv` | 处理后数据 | 中国中铁 2021-2025 年年度模型特征和规则标签 | 本地生成，不纳入公开仓库 |
+| `docs/MODEL_FEATURE_TABLE.md` | 公开摘要 | 展示预警特征表、标签规则和下一步建模安排 | 已生成 |
+
 ## 来源使用原则
 
 1. 优先使用官方披露和可复核文件。

@@ -12,6 +12,22 @@
 | 06 | `train_warning_model.py` | 训练财务风险预警模型 | `model_features.csv` | `outputs/models/` |
 | 07 | `make_figures.py` | 统一生成报告图表 | 处理后数据 | `outputs/figures/` |
 
+## 当前已实现脚本
+
+| 脚本 | 用途 | 输出 |
+|---|---|---|
+| `collect_official_reports.py` | 下载中国中铁年报、季报和评级报告 | `data/raw/annual_reports/`、`data/interim/official_reports_manifest.csv` |
+| `extract_financial_indicators.py` | 整理 2021-2025 年财务风险指标 | `data/processed/financial_risk_indicators.csv`、`docs/FINANCIAL_RISK_INDICATORS.md` |
+| `extract_risk_text_corpus.py` | 抽取年报风险语料命中片段 | `data/interim/risk_text_corpus_seed_matches.csv`、`docs/RISK_TEXT_CORPUS_SUMMARY.md` |
+| `build_text_risk_index.py` | 计算种子词文本风险指数 | `data/processed/text_risk_index_by_year.csv`、`docs/TEXT_RISK_INDEX.md` |
+| `build_word2vec_risk_terms.py` | 训练 Word2Vec 并扩展风险词典 | `configs/risk_terms_expanded.json`、`docs/WORD2VEC_RISK_TERMS.md` |
+| `create_risk_event_template.py` | 生成合规风险事件采集模板 | `data/interim/risk_event_collection_template.csv` |
+| `build_official_risk_events.py` | 生成官方披露风险事件种子样本 | `data/interim/risk_events_official_seed.csv`、`docs/OFFICIAL_RISK_EVENTS_SAMPLE.md` |
+| `build_external_risk_events.py` | 生成司法、执行、企查查扩展样本并合并事件表 | `data/interim/risk_events_external_sample.csv`、`data/processed/risk_events_combined.csv`、`docs/EXTERNAL_RISK_EVENTS_SAMPLE.md` |
+| `build_risk_network.py` | 基于合并事件表构建 Gephi 节点、边和 GEXF | `data/processed/risk_nodes.csv`、`data/processed/risk_edges.csv`、`outputs/gephi/china_railway_risk_network.gexf` |
+| `build_report_figures.py` | 生成报告图表 | `outputs/figures/`、`docs/assets/figures/`、`docs/FIGURES_CATALOG.md` |
+| `build_warning_model_features.py` | 生成机器学习预警模型年度特征表和规则标签 | `data/processed/model_features_china_railway.csv`、`docs/MODEL_FEATURE_TABLE.md` |
+
 ## 开发规则
 
 - 每个脚本都读取 `configs/project_config.yaml`。

@@ -1,4 +1,4 @@
-"""Build a small Gephi-ready risk network from the official seed events."""
+"""Build a Gephi-ready risk network from risk events."""
 
 from __future__ import annotations
 
@@ -10,7 +10,8 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 
 
-EVENTS_CSV = Path("data/interim/risk_events_official_seed.csv")
+PREFERRED_EVENTS_CSV = Path("data/processed/risk_events_combined.csv")
+FALLBACK_EVENTS_CSV = Path("data/interim/risk_events_official_seed.csv")
 NODES_CSV = Path("data/processed/risk_nodes.csv")
 EDGES_CSV = Path("data/processed/risk_edges.csv")
 GEXF_OUTPUT = Path("outputs/gephi/china_railway_risk_network.gexf")
@@ -23,9 +24,12 @@ def stable_node_id(node_type: str, label: str) -> str:
 
 
 def load_events() -> list[dict[str, str]]:
-    if not EVENTS_CSV.exists():
-        raise FileNotFoundError(f"Missing {EVENTS_CSV}; run scripts/build_official_risk_events.py first")
-    with EVENTS_CSV.open("r", newline="", encoding="utf-8-sig") as handle:
+    events_path = PREFERRED_EVENTS_CSV if PREFERRED_EVENTS_CSV.exists() else FALLBACK_EVENTS_CSV
+    if not events_path.exists():
+        raise FileNotFoundError(
+            f"Missing {events_path}; run scripts/build_official_risk_events.py first"
+        )
+    with events_path.open("r", newline="", encoding="utf-8-sig") as handle:
         return list(csv.DictReader(handle))
 
 
@@ -201,8 +205,8 @@ def write_markdown(nodes: list[dict[str, str]], edges: list[dict[str, str]]) -> 
             "",
             "## 解释边界",
             "",
-            "- 当前图谱只使用官方披露种子事件，主要用于验证字段、节点和边权重设计。",
-            "- 后续加入裁判文书、执行信息和企业风险样本后，节点中心性和社群划分才适合作为正式结论。",
+            "- 当前图谱优先使用官方披露、司法、执行和企查查扩展样本的合并事件表。",
+            "- 其中候选和待复核样本仍需人工复核，节点中心性只能作为课程阶段性风险线索。",
             "- Gephi 导入时建议使用 `weight` 作为边权重，并按 `node_type` 设置颜色。",
         ]
     )

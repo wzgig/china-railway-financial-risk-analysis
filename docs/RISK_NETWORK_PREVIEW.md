@@ -10,47 +10,47 @@
 
 ## 网络规模
 
-- 节点数：36
-- 边数：78
+- 节点数：77
+- 边数：133
 
 ## 节点类型
 
 | 类型 | 数量 |
 |---|---:|
-| company | 1 |
-| event | 17 |
-| related_party | 2 |
-| risk_type | 5 |
-| source | 6 |
-| year | 5 |
+| company | 9 |
+| event | 28 |
+| related_party | 13 |
+| risk_type | 7 |
+| source | 14 |
+| year | 6 |
 
 ## 边类型
 
 | 类型 | 数量 |
 |---|---:|
-| classified_as | 17 |
-| evidenced_by | 17 |
-| involves | 17 |
-| occurred_in | 17 |
-| related_to | 10 |
+| classified_as | 28 |
+| evidenced_by | 28 |
+| involves | 28 |
+| occurred_in | 28 |
+| related_to | 21 |
 
 ## 加权度最高节点
 
 | 节点 | 类型 | 加权度 |
 |---|---|---:|
 | 中国中铁股份有限公司 | company | 60.00 |
-| compliance | risk_type | 15.00 |
+| compliance | risk_type | 29.00 |
+| liquidity | risk_type | 24.00 |
 | OF2024-CONTRACT-ASSET asset_quality_signal | event | 11.00 |
 | solvency | risk_type | 11.00 |
 | OF2025-CONTRACT-ASSET asset_quality_signal | event | 11.00 |
+| EX2026-QCC-TUNNEL-23EXEC execution_case | event | 11.00 |
+| EX2026-QCC-TUNNEL-EXEC execution_case | event | 11.00 |
 | OF2021-GUARANTEE guarantee | event | 10.00 |
 | organizational_propagation | risk_type | 10.00 |
-| OF2022-GUARANTEE guarantee | event | 10.00 |
-| OF2023-GUARANTEE guarantee | event | 10.00 |
-| OF2024-PROFIT financial_pressure | event | 10.00 |
 
 ## 解释边界
 
-- 当前图谱只使用官方披露种子事件，主要用于验证字段、节点和边权重设计。
-- 后续加入裁判文书、执行信息和企业风险样本后，节点中心性和社群划分才适合作为正式结论。
+- 当前图谱优先使用官方披露、司法、执行和企查查扩展样本的合并事件表。
+- 其中候选和待复核样本仍需人工复核，节点中心性只能作为课程阶段性风险线索。
 - Gephi 导入时建议使用 `weight` 作为边权重，并按 `node_type` 设置颜色。

@@ -248,3 +248,40 @@
   - 构建机器学习预警模型和特征重要性结果。
   - 继续合规补充司法、执行和企业风险样本。
   - 准备最终 Word/PDF 和 3 分钟视频。
+
+## 2026-06-29 司法/执行/企查查扩展样本与模型特征表
+
+- 操作者：Codex
+- 用户要求：
+  - 按流程优先补充缺失的司法、执行、企查查扩展样本。
+  - 后续进行机器学习财务风险预警模型。
+- 已完成：
+  - 使用本地 `course-paper-workflow` skill 对齐课程论文工作流。
+  - 新增 `scripts/build_external_risk_events.py`，将公开法院 PDF、公开裁判文书转载、执行信息报道和企查查公开报道转引数据整理为标准风险事件。
+  - 生成本地扩展事件表 `data/interim/risk_events_external_sample.csv`，共 11 条事件。
+  - 生成本地合并事件表 `data/processed/risk_events_combined.csv`，共 28 条事件。
+  - 生成公开摘要 `docs/EXTERNAL_RISK_EVENTS_SAMPLE.md`，明确 `core`、`candidate`、`verify` 三类证据状态和合规边界。
+  - 修改 `scripts/build_risk_network.py`，图谱脚本优先读取合并事件表，缺失时回退到官方披露种子表。
+  - 重跑风险图谱，生成 77 个节点、133 条边的节点表、边表和 GEXF。
+  - 新增 `scripts/build_warning_model_features.py`，合并财务指标、Word2Vec 文本指标和风险事件聚合特征。
+  - 生成本地模型特征表 `data/processed/model_features_china_railway.csv`，共 5 个年度观测。
+  - 生成公开摘要 `docs/MODEL_FEATURE_TABLE.md`，说明规则标签和后续同业面板建模安排。
+  - 更新 `paper/draft.md`、README、GitHub Pages 首页、`SOURCES.md`、`LITERATURE_SEARCH_RECORD.md`、`EVIDENCE_MATRIX.md`、`COURSE_REQUIREMENTS_AUDIT.md`、`docs/DATA_DICTIONARY.md` 和 `scripts/README.md`。
+- 主要结果：
+  - 外部样本构成：司法样本 3 条、执行样本 5 条、企查查样本 3 条。
+  - 证据状态：`core` 2 条、`candidate` 5 条、`verify` 4 条。
+  - 合并图谱规模从 36 节点/78 边扩展到 77 节点/133 边。
+  - 年度特征表中，2023 年主要由事件数量和执行类金额触发财务压力规则，2024-2025 年由盈利下滑、杠杆水平、利息保障倍数、合同资产占比和事件数量共同触发。
+- 合规说明：
+  - 未绕过裁判文书网、执行信息公开网或企查查的登录、验证码、付费或访问频率限制。
+  - 企查查汇总型记录和媒体转引执行记录进入最终报告前需要人工复核和去重。
+- 验证：
+  - `python -m py_compile .\scripts\build_external_risk_events.py .\scripts\build_risk_network.py .\scripts\build_warning_model_features.py` 通过。
+  - `python .\scripts\build_external_risk_events.py` 成功生成 11 条外部样本和 28 条合并事件。
+  - `python .\scripts\build_risk_network.py` 成功生成 77 节点、133 边图谱输入。
+  - `python .\scripts\build_warning_model_features.py` 成功生成 5 行年度模型特征表。
+  - 使用 `course-paper-workflow` preflight 在临时公开审计目录运行，出现 2 个隐私误报：均为巨潮资讯 PDF URL 中的文件编号 `1225056518` 被识别为手机号，不是个人信息。
+- 下一步：
+  - 对 `candidate` 和 `verify` 样本进行人工复核、截图/导出留痕和事件级去重。
+  - 采集同业上市建筑企业 2021-2025 年财务指标，按当前特征表扩展为面板数据。
+  - 训练 Logistic Regression 和 Random Forest 预警模型，输出 F1、Recall、AUC、特征重要性和中国中铁预测结果。

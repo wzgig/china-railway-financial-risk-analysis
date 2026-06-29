@@ -5,9 +5,11 @@
 | 字段 | 类型 | 说明 |
 |---|---|---|
 | event_id | string | 风险事件唯一编号 |
-| source | string | 数据来源，如 annual_report、wenshu、execution、qcc |
+| source_type | string | 数据来源，如 annual_report、wenshu、execution、qcc |
+| source_name | string | 平台、文书、公告或报告名称 |
 | source_url | string | 原始链接或本地文件路径 |
 | access_date | date | 访问或下载日期 |
+| search_keyword | string | 检索关键词 |
 | company_name | string | 涉及主体标准名称 |
 | company_role | string | 原告、被告、被执行人、担保方、发行人等 |
 | related_party | string | 对手方或相关主体 |
@@ -24,6 +26,7 @@
 | severity_score | float | 影响程度得分 |
 | probability_score | float | 发生概率得分 |
 | evidence_status | string | core、candidate、verify、exclude |
+| notes | string | 复核、去重或证据边界说明 |
 
 ## `risk_nodes.csv`
 
