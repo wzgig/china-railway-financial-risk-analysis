@@ -110,3 +110,30 @@
   - 指标均来自公开年报原文表格。
 - 下一步：
   - 抽取合同资产、应收账款、短期债务、有息债务、利息保障倍数和担保承诺。
+
+## 2026-06-29 财务风险指标与文本语料前处理
+
+- 操作者：Codex
+- 用户要求：
+  - 若已有记录每次工作和后续目标的文件，则继续使用，不重复创建。
+  - 按规划继续下一步工作。
+- 文件判断：
+  - 已有 `PROJECT_PROGRESS.md` 用于记录每次工作内容、验证和下一步目标，因此未另建重复文件。
+- 已完成：
+  - 新增 `scripts/extract_financial_indicators.py`，从官方年报整理 2021-2025 年财务风险指标。
+  - 生成本地结构化数据 `data/processed/financial_risk_indicators.csv`。
+  - 生成公开摘要 `docs/FINANCIAL_RISK_INDICATORS.md`。
+  - 新增 `configs/risk_seed_terms.json`，覆盖流动性、偿债、营运、盈利、项目、合规、市场、组织传导风险。
+  - 新增 `scripts/extract_risk_text_corpus.py`，从年报文本缓存抽取风险种子词命中片段。
+  - 生成本地中间语料 `data/interim/risk_text_corpus_seed_matches.csv`。
+  - 生成公开摘要 `docs/RISK_TEXT_CORPUS_SUMMARY.md`。
+  - 更新 README 和 GitHub Pages 首页入口。
+- 主要结果：
+  - 财务指标显示：2023 年后营业收入和归母净利润连续下降；资产负债率从 2021 年 73.68% 上升到 2025 年 78.12%；利息保障倍数从 2021 年 4.09 下降到 2025 年 2.98。
+  - 文本语料初筛命中 34,840 条种子词片段，可用于后续 jieba 分词、Word2Vec 扩词和风险词频权重计算。
+- 验证：
+  - `python -m py_compile .\scripts\collect_official_reports.py .\scripts\extract_financial_indicators.py .\scripts\extract_risk_text_corpus.py` 通过。
+  - 财务指标脚本来源校验显示 2021-2025 年关键披露词均能在年报文本中找到。
+- 下一步：
+  - 对风险文本语料进行 jieba 分词和停用词清理，计算年度风险类别词频权重。
+  - 准备司法、执行、企查查风险事件的合规采集模板。

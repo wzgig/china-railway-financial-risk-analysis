@@ -34,6 +34,8 @@ description: 风险图谱、文本指标与机器学习预警的课程项目规�
 - [GB/T 7714 参考文献清单](https://github.com/wzgig/china-railway-financial-risk-analysis/blob/main/paper/references_gbt7714.md)
 - [官方报告下载清单](OFFICIAL_REPORTS_MANIFEST.md)
 - [初始财务指标表](FINANCIAL_INDICATORS_INITIAL.md)
+- [财务风险指标数据集](FINANCIAL_RISK_INDICATORS.md)
+- [年报文本风险语料初筛](RISK_TEXT_CORPUS_SUMMARY.md)
 - [格式模板提取记录](FORMAT_TEMPLATE_NOTES.md)
 - [风险指标框架](RISK_INDICATOR_FRAMEWORK.md)
 - [数据字典](DATA_DICTIONARY.md)

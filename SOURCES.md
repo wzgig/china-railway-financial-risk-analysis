@@ -53,6 +53,18 @@
 | `paper/references.bib` | BibTeX/LaTeX/Typst 可用参考文献库 |
 | `paper/references_gbt7714.md` | GB/T 7714 顺序编码制参考文献清单 |
 
+## 本轮生成的数据与脚本
+
+| 文件 | 类型 | 用途 | 状态 |
+|---|---|---|---|
+| `scripts/extract_financial_indicators.py` | Python 脚本 | 从官方年报整理 2021-2025 财务风险指标，生成 CSV 和公开摘要 | 已运行 |
+| `data/processed/financial_risk_indicators.csv` | 结构化数据 | 建模和图表使用的财务风险指标表 | 本地生成，不纳入公开仓库 |
+| `docs/FINANCIAL_RISK_INDICATORS.md` | 公开摘要 | 展示财务风险指标、初步观察和来源校验 | 已生成 |
+| `configs/risk_seed_terms.json` | 配置文件 | 文本风险指标的种子词集 | 已创建 |
+| `scripts/extract_risk_text_corpus.py` | Python 脚本 | 从年报文本缓存抽取风险种子词命中片段 | 已运行 |
+| `data/interim/risk_text_corpus_seed_matches.csv` | 中间数据 | 年报风险语料初筛明细 | 本地生成，不纳入公开仓库 |
+| `docs/RISK_TEXT_CORPUS_SUMMARY.md` | 公开摘要 | 展示年度风险类别命中次数和高频种子词 | 已生成 |
+
 ## 来源使用原则
 
 1. 优先使用官方披露和可复核文件。

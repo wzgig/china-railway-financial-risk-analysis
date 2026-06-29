@@ -55,6 +55,8 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 - EndNote RIS 文件：[paper/references.ris](paper/references.ris)
 - 官方报告下载清单：[docs/OFFICIAL_REPORTS_MANIFEST.md](docs/OFFICIAL_REPORTS_MANIFEST.md)
 - 初始财务指标表：[docs/FINANCIAL_INDICATORS_INITIAL.md](docs/FINANCIAL_INDICATORS_INITIAL.md)
+- 财务风险指标数据集：[docs/FINANCIAL_RISK_INDICATORS.md](docs/FINANCIAL_RISK_INDICATORS.md)
+- 年报文本风险语料初筛：[docs/RISK_TEXT_CORPUS_SUMMARY.md](docs/RISK_TEXT_CORPUS_SUMMARY.md)
 - 格式模板提取记录：[docs/FORMAT_TEMPLATE_NOTES.md](docs/FORMAT_TEMPLATE_NOTES.md)
 
 ## 技能与插件判断
