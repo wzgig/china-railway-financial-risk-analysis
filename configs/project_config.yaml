@@ -1,0 +1,34 @@
+project:
+  name: "china-railway-financial-risk"
+  company_name: "中国中铁股份有限公司"
+  stock_code: "601390"
+  h_share_code: "00390"
+  analysis_period:
+    start_year: 2021
+    end_year: 2025
+  latest_observation: "2026Q1"
+
+paths:
+  raw_data: "data/raw"
+  interim_data: "data/interim"
+  processed_data: "data/processed"
+  outputs: "outputs"
+  figures: "outputs/figures"
+  gephi: "outputs/gephi"
+  models: "outputs/models"
+  paper: "paper"
+
+risk_types:
+  - liquidity
+  - solvency
+  - operation
+  - profitability
+  - project
+  - compliance
+  - market
+  - organizational_propagation
+
+compliance:
+  no_bypass_login_or_captcha: true
+  prefer_official_sources: true
+  record_access_date: true
