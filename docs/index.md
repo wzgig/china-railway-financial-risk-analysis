@@ -30,6 +30,11 @@ description: 风险图谱、文本指标与机器学习预警的课程项目规�
 
 ## 核心文档
 
+- [草稿版报告](https://github.com/wzgig/china-railway-financial-risk-analysis/blob/main/paper/draft.md)
+- [GB/T 7714 参考文献清单](https://github.com/wzgig/china-railway-financial-risk-analysis/blob/main/paper/references_gbt7714.md)
+- [官方报告下载清单](OFFICIAL_REPORTS_MANIFEST.md)
+- [初始财务指标表](FINANCIAL_INDICATORS_INITIAL.md)
+- [格式模板提取记录](FORMAT_TEMPLATE_NOTES.md)
 - [风险指标框架](RISK_INDICATOR_FRAMEWORK.md)
 - [数据字典](DATA_DICTIONARY.md)
 - [视频分镜脚本](VIDEO_STORYBOARD.md)

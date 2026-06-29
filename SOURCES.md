@@ -34,6 +34,25 @@
 | 企业风险 | 企查查或同类平台合法导出 | 行政处罚、经营异常、股权冻结、司法协助 |
 | 学术文献 | CNKI、万方、Google Scholar、学校数据库 | 财务风险预警、文本风险指标、复杂网络风险传导方法 |
 
+## 本轮新增核心文献与标准
+
+| 编号 | 来源 | 链接 | 用途 | 状态 |
+|---|---|---|---|---|
+| R1 | 中国中铁股份有限公司 2025 年年度报告摘要 | https://static.cninfo.com.cn/finalpage/2026-03-31/1225056518.PDF | 最新年度经营、财务和债券信息 | core |
+| R2 | 中国中铁股份有限公司 2024 年年度报告 | https://www.crec.cn/web/fileDir/resource/cms/article/10090220/10287887/2025-019%20%E4%B8%AD%E5%9B%BD%E4%B8%AD%E9%93%812024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf | 财务附注、合同资产、信用风险和流动性风险 | core |
+| R3 | 联合资信 2025 年跟踪评级报告 | https://www.lhratings.com/reports/B0411-P76587-2024-GZ2025.pdf | 信用评级、外部风险评价 | core |
+| R4 | GB/T 7714-2025 官方标准信息 | https://std.samr.gov.cn/gb/search/gbDetailed?id=4507EFE13D37CB6AE06397BE0A0A601F | 参考文献格式依据 | core |
+| R5 | Crossref DOI 元数据 | https://api.crossref.org/ | 校验英文期刊、会议论文 DOI 与元数据 | core |
+
+## 本轮生成的引用文件
+
+| 文件 | 用途 |
+|---|---|
+| `paper/references.ris` | EndNote 可直接导入的 RIS 文件 |
+| `paper/references.enw` | EndNote tagged import 备选文件 |
+| `paper/references.bib` | BibTeX/LaTeX/Typst 可用参考文献库 |
+| `paper/references_gbt7714.md` | GB/T 7714 顺序编码制参考文献清单 |
+
 ## 来源使用原则
 
 1. 优先使用官方披露和可复核文件。

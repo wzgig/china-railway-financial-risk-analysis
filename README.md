@@ -48,6 +48,15 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 7. 训练风险预警模型，输出模型性能、特征重要性和中国中铁风险预测结果。
 8. 完成报告、图表、视频脚本和最终视频。
 
+## 当前阶段产物
+
+- 草稿版报告：[paper/draft.md](paper/draft.md)
+- GB/T 7714 参考文献清单：[paper/references_gbt7714.md](paper/references_gbt7714.md)
+- EndNote RIS 文件：[paper/references.ris](paper/references.ris)
+- 官方报告下载清单：[docs/OFFICIAL_REPORTS_MANIFEST.md](docs/OFFICIAL_REPORTS_MANIFEST.md)
+- 初始财务指标表：[docs/FINANCIAL_INDICATORS_INITIAL.md](docs/FINANCIAL_INDICATORS_INITIAL.md)
+- 格式模板提取记录：[docs/FORMAT_TEMPLATE_NOTES.md](docs/FORMAT_TEMPLATE_NOTES.md)
+
 ## 技能与插件判断
 
 当前已使用本地 `course-paper-workflow` skill 做课程项目规划，不需要额外下载新的 skill 或插件。后续若进入具体阶段，可按需使用本地已有能力：

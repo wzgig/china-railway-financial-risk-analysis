@@ -1,0 +1,213 @@
+%0 Report
+%A 中国中铁股份有限公司
+%T 中国中铁股份有限公司2025年年度报告摘要
+%D 2026
+%8 2026-03-31
+%U https://static.cninfo.com.cn/finalpage/2026-03-31/1225056518.PDF
+%G Chinese
+
+%0 Report
+%A 中国中铁股份有限公司
+%T 中国中铁股份有限公司2024年年度报告
+%D 2025
+%8 2025-03-29
+%U https://www.crec.cn/web/fileDir/resource/cms/article/10090220/10287887/2025-019%20%E4%B8%AD%E5%9B%BD%E4%B8%AD%E9%93%812024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf
+%G Chinese
+
+%0 Report
+%A 联合资信评估股份有限公司
+%T 中国中铁股份有限公司2025年跟踪评级报告
+%D 2025
+%8 2025-05-07
+%U https://www.lhratings.com/reports/B0411-P76587-2024-GZ2025.pdf
+%G Chinese
+
+%0 Electronic Source
+%A 中国裁判文书网
+%T 中国裁判文书网
+%D 2026
+%U https://wenshu.court.gov.cn/
+%G Chinese
+
+%0 Electronic Source
+%A 中国执行信息公开网
+%T 中国执行信息公开网
+%D 2026
+%U http://zxgk.court.gov.cn/
+%G Chinese
+
+%0 Electronic Source
+%A 企查查
+%T 企查查企业信息查询平台
+%D 2026
+%U https://www.qcc.com/
+%G Chinese
+
+%0 Journal Article
+%A Beaver, William H.
+%T Financial ratios as predictors of failure
+%J Journal of Accounting Research
+%D 1966
+%V 4
+%P 71-111
+%R 10.2307/2490171
+%G English
+
+%0 Journal Article
+%A Altman, Edward I.
+%T Financial ratios, discriminant analysis and the prediction of corporate bankruptcy
+%J The Journal of Finance
+%D 1968
+%V 23
+%N 4
+%P 589-609
+%R 10.1111/j.1540-6261.1968.tb00843.x
+%G English
+
+%0 Journal Article
+%A Ohlson, James A.
+%T Financial ratios and the probabilistic prediction of bankruptcy
+%J Journal of Accounting Research
+%D 1980
+%V 18
+%N 1
+%P 109-131
+%R 10.2307/2490395
+%G English
+
+%0 Journal Article
+%A Shumway, Tyler
+%T Forecasting bankruptcy more accurately: a simple hazard model
+%J The Journal of Business
+%D 2001
+%V 74
+%N 1
+%P 101-124
+%R 10.1086/209665
+%G English
+
+%0 Journal Article
+%A Barboza, Flavio
+%A Kimura, Herbert
+%A Altman, Edward
+%T Machine learning models and bankruptcy prediction
+%J Expert Systems with Applications
+%D 2017
+%V 83
+%P 405-417
+%R 10.1016/j.eswa.2017.04.006
+%G English
+
+%0 Journal Article
+%A Lessmann, Stefan
+%A Baesens, Bart
+%A Seow, Hsin-Vonn
+%A Thomas, Lyn C.
+%T Benchmarking state-of-the-art classification algorithms for credit scoring: an update of research
+%J European Journal of Operational Research
+%D 2015
+%V 247
+%N 1
+%P 124-136
+%R 10.1016/j.ejor.2015.05.030
+%G English
+
+%0 Journal Article
+%A Breiman, Leo
+%T Random forests
+%J Machine Learning
+%D 2001
+%V 45
+%N 1
+%P 5-32
+%R 10.1023/A:1010933404324
+%G English
+
+%0 Conference Paper
+%A Chen, Tianqi
+%A Guestrin, Carlos
+%T XGBoost: a scalable tree boosting system
+%B Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining
+%D 2016
+%P 785-794
+%R 10.1145/2939672.2939785
+%I ACM
+%G English
+
+%0 Journal Article
+%A Loughran, Tim
+%A McDonald, Bill
+%T When is a liability not a liability? Textual analysis, dictionaries, and 10-Ks
+%J The Journal of Finance
+%D 2011
+%V 66
+%N 1
+%P 35-65
+%R 10.1111/j.1540-6261.2010.01625.x
+%G English
+
+%0 Journal Article
+%A Campbell, John L.
+%A Chen, Hsinchun
+%A Dhaliwal, Dan S.
+%A Lu, Hai
+%A Steele, Logan B.
+%T The information content of mandatory risk factor disclosures in corporate filings
+%J Review of Accounting Studies
+%D 2014
+%V 19
+%N 1
+%P 396-455
+%R 10.1007/s11142-013-9258-3
+%G English
+
+%0 Electronic Source
+%A Mikolov, Tomas
+%A Chen, Kai
+%A Corrado, Greg
+%A Dean, Jeffrey
+%T Efficient estimation of word representations in vector space
+%D 2013
+%U https://arxiv.org/abs/1301.3781
+%G English
+
+%0 Conference Paper
+%A Bastian, Mathieu
+%A Heymann, Sebastien
+%A Jacomy, Mathieu
+%T Gephi: an open source software for exploring and manipulating networks
+%B Proceedings of the International AAAI Conference on Web and Social Media
+%D 2009
+%V 3
+%N 1
+%P 361-362
+%R 10.1609/icwsm.v3i1.13937
+%G English
+
+%0 Journal Article
+%A Hoyt, Robert E.
+%A Liebenberg, Andre P.
+%T The value of enterprise risk management
+%J Journal of Risk and Insurance
+%D 2011
+%V 78
+%N 4
+%P 795-822
+%R 10.1111/j.1539-6975.2011.01413.x
+%G English
+
+%0 Report
+%A Committee of Sponsoring Organizations of the Treadway Commission
+%T Enterprise risk management: integrating with strategy and performance
+%D 2017
+%U https://www.coso.org/erm
+%G English
+
+%0 Standard
+%A 国家市场监督管理总局
+%A 国家标准化管理委员会
+%T 信息与文献 参考文献著录规则: GB/T 7714-2025
+%D 2025
+%8 2025-12-02
+%U https://std.samr.gov.cn/gb/search/gbDetailed?id=4507EFE13D37CB6AE06397BE0A0A601F
+%G Chinese

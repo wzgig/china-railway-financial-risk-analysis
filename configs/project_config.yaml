@@ -3,10 +3,13 @@ project:
   company_name: "中国中铁股份有限公司"
   stock_code: "601390"
   h_share_code: "00390"
+  deadline: "2026-07-10"
+  current_stage: "preparation-and-draft"
   analysis_period:
     start_year: 2021
     end_year: 2025
   latest_observation: "2026Q1"
+  citation_style: "GB/T 7714-2025 sequential numeric; fallback GB/T 7714-2015 if school template requires"
 
 paths:
   raw_data: "data/raw"

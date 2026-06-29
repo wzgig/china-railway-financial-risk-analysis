@@ -11,6 +11,9 @@
 | 日期 | 数据库或网站 | 检索式 | 筛选条件 | 结果 | 下一步 |
 |---|---|---|---|---|---|
 | 2026-06-29 | 中国中铁官网、上交所、巨潮资讯 | 中国中铁 601390 年度报告 2025 2024 2023 | 定期报告、公告、评级、担保 | 已确认有 2025 年报摘要、2026Q1 报告和公告入口 | 下载年报全文与 2021-2025 历年报告 |
+| 2026-06-29 | 巨潮资讯 | 中国中铁 2025 年年度报告摘要 601390 | 官方 PDF | 纳入 2025 年营收、净利、现金流、资产负债率等关键事实 | 后续下载年报全文核对附注 |
+| 2026-06-29 | 中国中铁官网 | 中国中铁 2024 年年度报告 PDF | 官方 PDF | 纳入合同资产、信用风险、流动性风险、担保与差额补足等附注信息 | 后续抽取 2021-2025 可比财务指标 |
+| 2026-06-29 | 联合资信 | 中国中铁 2025 年跟踪评级报告 | 评级报告 | 纳入主体 AAA/稳定、评级观点与债务风险观察 | 后续抽取评级关注因素 |
 
 ## 第二轮：司法与企业风险数据
 
@@ -28,6 +31,15 @@
 | 待执行 | CNKI/万方 | 文本分析 风险指标 Word2Vec jieba 年报 | 近 5 年、实证研究 | 待检索 | 支撑风险词典和文本指标 |
 | 待执行 | Google Scholar | financial distress prediction machine learning construction firms | 近 10 年、综述或高引用 | 待检索 | 支撑模型选择 |
 | 待执行 | Google Scholar/CNKI | risk propagation network Gephi enterprise risk | 复杂网络、风险传导 | 待检索 | 支撑图谱解释 |
+| 2026-06-29 | Crossref/Google Scholar/公开检索 | bankruptcy prediction financial ratios Altman Ohlson Shumway Beaver | 经典、高引用、可核验 DOI | 纳入 Beaver(1966)、Altman(1968)、Ohlson(1980)、Shumway(2001) | 用作财务风险预警理论基础 |
+| 2026-06-29 | Crossref/Google Scholar/公开检索 | machine learning bankruptcy prediction credit scoring XGBoost random forest | 期刊或顶会、可核验 DOI | 纳入 Barboza 等、Lessmann 等、Breiman、Chen 与 Guestrin | 用作模型选择与验证依据 |
+| 2026-06-29 | Crossref/Google Scholar/公开检索 | textual analysis risk disclosure 10-K word2vec Gephi ERM | 期刊、顶会、官方报告 | 纳入 Loughran & McDonald、Campbell 等、Mikolov 等、Bastian 等、COSO | 用作文本指标、图谱和风险管理框架依据 |
+
+## 第四轮：引用标准与 EndNote 输出
+
+| 日期 | 数据库或网站 | 检索式 | 筛选条件 | 结果 | 下一步 |
+|---|---|---|---|---|---|
+| 2026-06-29 | 全国标准信息公共服务平台 | GB/T 7714-2025 信息与文献 参考文献著录规则 | 官方标准信息 | 确认 GB/T 7714-2025 发布日期为 2025-12-02，实施日期为 2026-07-01，全部代替 GB/T 7714-2015 | 本项目参考文献清单按新国标顺序编码制整理 |
 
 ## 纳入标准
 
