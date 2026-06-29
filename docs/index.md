@@ -43,6 +43,8 @@ description: 风险图谱、文本指标与机器学习预警的课程项目规�
 - [司法/执行/企查查扩展样本](EXTERNAL_RISK_EVENTS_SAMPLE.md)
 - [风险图谱预览](RISK_NETWORK_PREVIEW.md)
 - [机器学习预警特征表](MODEL_FEATURE_TABLE.md)
+- [同业财务面板](PEER_FINANCIAL_PANEL.md)
+- [财务风险预警基线模型](FINANCIAL_WARNING_MODEL.md)
 - [图表目录](FIGURES_CATALOG.md)
 - [格式模板提取记录](FORMAT_TEMPLATE_NOTES.md)
 - [风险指标框架](RISK_INDICATOR_FRAMEWORK.md)

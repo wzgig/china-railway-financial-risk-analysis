@@ -28,7 +28,6 @@
 
 ## 下一步机器学习安排
 
-1. 采集同业上市建筑企业 2021-2025 年财务指标，并复用本表字段。
-2. 将司法、执行、企查查样本按主体映射到同业公司年度，生成事件特征。
-3. 使用时间切分训练 Logistic Regression 和 Random Forest，报告 F1、Recall、AUC 与特征重要性。
-4. 将训练好的模型回代中国中铁，输出年度风险等级和主要驱动因素。
+1. 已完成同业上市建筑企业 2021-2025 年财务面板采集，见 `docs/PEER_FINANCIAL_PANEL.md`。
+2. 已完成 Logistic Regression 和 Random Forest 财务预警基线模型，见 `docs/FINANCIAL_WARNING_MODEL.md`。
+3. 后续若时间允许，再将同业司法、执行、企查查样本按主体映射到年度面板，生成融合事件特征。

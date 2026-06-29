@@ -27,6 +27,8 @@
 | `build_risk_network.py` | 基于合并事件表构建 Gephi 节点、边和 GEXF | `data/processed/risk_nodes.csv`、`data/processed/risk_edges.csv`、`outputs/gephi/china_railway_risk_network.gexf` |
 | `build_report_figures.py` | 生成报告图表 | `outputs/figures/`、`docs/assets/figures/`、`docs/FIGURES_CATALOG.md` |
 | `build_warning_model_features.py` | 生成机器学习预警模型年度特征表和规则标签 | `data/processed/model_features_china_railway.csv`、`docs/MODEL_FEATURE_TABLE.md` |
+| `collect_peer_financial_panel.py` | 采集同业建筑上市公司 2021-2025 年财务面板 | `data/processed/peer_financial_panel.csv`、`docs/PEER_FINANCIAL_PANEL.md` |
+| `train_financial_warning_model.py` | 训练 Logistic Regression 和 Random Forest 财务预警基线模型 | `outputs/models/`、`outputs/tables/`、`docs/FINANCIAL_WARNING_MODEL.md` |
 
 ## 开发规则
 

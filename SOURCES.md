@@ -103,6 +103,13 @@
 | X6 | 经济参考网/新浪财经转引天眼查 | https://finance.sina.com.cn/stock/relnews/cn/2025-05-09/doc-inevxzxu7563170.shtml | 中铁三局桥隧新增被执行人样本 | candidate |
 | X7 | 财中社转引企查查 | https://m.caizhongshe.cn/article-7332928644422008550.html | 中铁隧道局行政处罚、被执行人和短期新增执行案件汇总样本 | verify |
 
+## 本轮新增同业面板与机器学习来源
+
+| 编号 | 来源 | 链接 | 用途 | 状态 |
+|---|---|---|---|---|
+| M1 | 东方财富 HSF10 财务分析接口 | https://emweb.securities.eastmoney.com/PC_HSF10/NewFinanceAnalysis/ZYZBAjaxNew | 采集 11 家建筑工程类上市公司 2021-2025 年同业财务面板 | candidate，二级财经数据源 |
+| M2 | scikit-learn | https://scikit-learn.org/ | Logistic Regression、Random Forest、指标评估和模型管线 | core，本地包版本 1.8.0 |
+
 ## 本轮新增脚本和数据产物
 
 | 文件 | 类型 | 用途 | 状态 |
@@ -114,6 +121,14 @@
 | `scripts/build_warning_model_features.py` | Python 脚本 | 合并财务、文本和事件特征，生成机器学习预警前置特征表 | 已运行 |
 | `data/processed/model_features_china_railway.csv` | 处理后数据 | 中国中铁 2021-2025 年年度模型特征和规则标签 | 本地生成，不纳入公开仓库 |
 | `docs/MODEL_FEATURE_TABLE.md` | 公开摘要 | 展示预警特征表、标签规则和下一步建模安排 | 已生成 |
+| `scripts/collect_peer_financial_panel.py` | Python 脚本 | 采集同业上市建筑企业 2021-2025 年财务面板 | 已运行 |
+| `data/processed/peer_financial_panel.csv` | 处理后数据 | 11 家公司、55 条年度财务面板记录 | 本地生成，不纳入公开仓库 |
+| `docs/PEER_FINANCIAL_PANEL.md` | 公开摘要 | 展示同业样本、指标口径和 2025 年指标预览 | 已生成 |
+| `scripts/train_financial_warning_model.py` | Python 脚本 | 训练 Logistic Regression 和 Random Forest 财务预警基线模型 | 已运行 |
+| `data/processed/warning_model_dataset.csv` | 处理后数据 | 44 条监督学习样本 | 本地生成，不纳入公开仓库 |
+| `outputs/models/financial_warning_*.joblib` | 模型文件 | 财务预警基线模型 | 本地生成，不纳入公开仓库 |
+| `outputs/tables/warning_model_*.csv` | 评估表 | 模型指标和特征重要性 | 本地生成，不纳入公开仓库 |
+| `docs/FINANCIAL_WARNING_MODEL.md` | 公开摘要 | 展示模型设计、测试集表现、特征重要性和中国中铁预测结果 | 已生成 |
 
 ## 来源使用原则
 

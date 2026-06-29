@@ -280,8 +280,45 @@
   - `python .\scripts\build_external_risk_events.py` 成功生成 11 条外部样本和 28 条合并事件。
   - `python .\scripts\build_risk_network.py` 成功生成 77 节点、133 边图谱输入。
   - `python .\scripts\build_warning_model_features.py` 成功生成 5 行年度模型特征表。
-  - 使用 `course-paper-workflow` preflight 在临时公开审计目录运行，出现 2 个隐私误报：均为巨潮资讯 PDF URL 中的文件编号 `1225056518` 被识别为手机号，不是个人信息。
+  - 使用 `course-paper-workflow` preflight 在临时公开审计目录运行，出现 2 个误报：均为巨潮资讯 PDF URL 中的长数字文件编号，不是个人信息。
 - 下一步：
   - 对 `candidate` 和 `verify` 样本进行人工复核、截图/导出留痕和事件级去重。
   - 采集同业上市建筑企业 2021-2025 年财务指标，按当前特征表扩展为面板数据。
   - 训练 Logistic Regression 和 Random Forest 预警模型，输出 F1、Recall、AUC、特征重要性和中国中铁预测结果。
+
+## 2026-06-29 同业面板与财务预警基线模型
+
+- 操作者：Codex
+- 用户要求：
+  - 按照规划进度继续下一步工作。
+- 已完成：
+  - 使用本地 `course-paper-workflow` skill 对齐课程论文工作流。
+  - 新增 `scripts/collect_peer_financial_panel.py`，通过东方财富 HSF10 财务分析接口采集同业上市建筑企业 2021-2025 年年报财务指标。
+  - 生成本地同业面板 `data/processed/peer_financial_panel.csv`，覆盖 11 家公司、55 条年度记录。
+  - 生成公开摘要 `docs/PEER_FINANCIAL_PANEL.md`，说明样本公司、数据口径和 2025 年指标预览。
+  - 新增 `scripts/train_financial_warning_model.py`，构造下一年度财务压力规则标签，并训练 Logistic Regression 和 Random Forest 基线模型。
+  - 生成本地监督学习数据 `data/processed/warning_model_dataset.csv`，共 44 条样本。
+  - 生成本地模型文件 `outputs/models/financial_warning_logistic.joblib` 和 `outputs/models/financial_warning_random_forest.joblib`。
+  - 生成本地评估表 `outputs/tables/warning_model_metrics.csv`、特征重要性表 `outputs/tables/warning_model_feature_importance.csv` 和中国中铁预测表 `data/processed/china_railway_warning_predictions.csv`。
+  - 生成公开摘要 `docs/FINANCIAL_WARNING_MODEL.md`。
+  - 更新 `paper/draft.md`、README、GitHub Pages 首页、`SOURCES.md`、`LITERATURE_SEARCH_RECORD.md`、`EVIDENCE_MATRIX.md`、`COURSE_REQUIREMENTS_AUDIT.md`、`docs/DATA_DICTIONARY.md`、`docs/MODEL_FEATURE_TABLE.md` 和 `scripts/README.md`。
+- 主要结果：
+  - 同业样本包括中国中铁、中国铁建、中国交建、中国建筑、中国电建、中国能建、上海建工、隧道股份、安徽建工、中国化学和中国中冶。
+  - 监督样本标签分布为 0 类 22 条、1 类 22 条。
+  - 测试集为 2024 年特征预测 2025 年压力标签，共 11 条样本。
+  - Logistic Regression 和 Random Forest 测试集 F1 均为 0.8235，Recall 均为 0.7000。
+  - 随机森林重要特征靠前的是现金比率、资产负债率、流动比率、毛利率、营业收入规模和利息保障倍数代理。
+  - 中国中铁 2025 年特征对应 2026 年前瞻压力概率：Logistic Regression 为 0.9780，Random Forest 为 0.9037，两个模型均给出压力预警。
+- 解释边界：
+  - 东方财富 HSF10 为二级财经数据源；中国中铁核心财务结论仍以官方年报抽取数据为准。
+  - 当前模型是小样本财务指标基线模型，标签是规则构造结果，不等同于违约、评级下调或投资建议。
+  - 同业文本和事件特征尚未完整接入机器学习模型。
+- 验证：
+  - `python -m py_compile .\scripts\collect_peer_financial_panel.py .\scripts\train_financial_warning_model.py` 通过。
+  - `python .\scripts\collect_peer_financial_panel.py` 成功生成 55 条同业年度记录。
+  - `python .\scripts\train_financial_warning_model.py` 成功生成 44 条监督学习样本、模型文件、指标表、特征重要性表和公开摘要。
+  - 使用 `course-paper-workflow` preflight 在临时公开审计目录运行，剩余 2 个误报：均为巨潮资讯 PDF URL 中的长数字文件编号，不是个人信息。
+- 下一步：
+  - 生成或整理模型相关图表，视篇幅纳入报告。
+  - 对执行和企查查候选样本继续复核去重。
+  - 准备 Gephi 最终导图、Word/PDF 输出和 3 分钟视频。

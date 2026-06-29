@@ -69,3 +69,33 @@
 | text_risk_score | float | 文本风险综合得分 |
 | network_centrality | float | 风险网络中心性 |
 | label | int | 风险标签，0/1 或等级编码 |
+
+## `peer_financial_panel.csv`
+
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| company_code | string | 股票代码 |
+| company_name | string | 公司全称 |
+| short_name | string | 公司简称 |
+| year | int | 年报年份 |
+| revenue_growth_pct | float | 营业收入同比增速 |
+| parent_net_profit_growth_pct | float | 归母净利润同比增速 |
+| operating_cash_flow_to_revenue_pct | float | 经营现金流净额/营业收入 |
+| asset_liability_ratio_pct | float | 资产负债率 |
+| current_ratio | float | 流动比率 |
+| quick_ratio | float | 速动比率 |
+| cash_ratio | float | 现金比率 |
+| gross_margin_pct | float | 毛利率 |
+| net_profit_margin_pct | float | 销售净利率 |
+| roe_weighted_pct | float | 加权净资产收益率 |
+| interest_coverage_proxy | float | 东方财富口径利息保障倍数代理变量 |
+
+## `warning_model_dataset.csv`
+
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| feature_year | int | 特征年份 |
+| label_year | int | 标签年份，即下一年 |
+| financial_pressure_label_next_year | int | 下一年度财务压力规则标签 |
+| label_rule_score | int | 触发压力规则数量 |
+| label_reason | string | 标签触发原因 |
