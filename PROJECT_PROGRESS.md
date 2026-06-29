@@ -32,7 +32,7 @@
   - 将原始课程截图和乱码 Markdown 加入 `.gitignore`，仅保留整理后的公开要求文本。
   - 准备 GitHub Pages 首页和仓库发布配置。
 - 隐私检查：
-  - 未发现常见密钥、GitHub token、邮箱、手机号等敏感字符串。
+  - 未发现常见密钥、GitHub token、电子联络方式等敏感字符串。
   - 原始课程材料保留在本地，不纳入公开仓库。
 
 ## 2026-06-29 GitHub 发布完成
@@ -137,3 +137,34 @@
 - 下一步：
   - 对风险文本语料进行 jieba 分词和停用词清理，计算年度风险类别词频权重。
   - 准备司法、执行、企查查风险事件的合规采集模板。
+
+## 2026-06-29 文本风险指数与事件模板整理
+
+- 操作者：Codex
+- 目标：按既定规划完成文本风险指标初步计算，并建立后续司法、执行和企业风险事件的合规采集模板。
+- 已完成：
+  - 新增 `configs/stopwords_zh.txt`，用于中文分词和关键词抽取停用词控制。
+  - 新增 `scripts/build_text_risk_index.py`，对 2021-2025 年年报文本进行 jieba 分词、TF-IDF 风格关键词抽取和风险种子词命中统计。
+  - 生成本地数据 `data/processed/text_risk_index_by_year.csv` 和 `data/processed/text_risk_terms_by_year.csv`。
+  - 生成公开摘要 `docs/TEXT_RISK_INDEX.md`。
+  - 新增 `configs/risk_event_schema.json` 和 `scripts/create_risk_event_template.py`，规范风险事件字段、事件类型、风险类型和合规边界。
+  - 生成本地模板 `data/interim/risk_event_collection_template.csv`。
+  - 生成公开说明 `docs/RISK_EVENT_COLLECTION_TEMPLATE.md`。
+  - 更新 `paper/draft.md`，将文本风险指数的主要发现写入“初步风险识别”部分。
+  - 更新 `SOURCES.md` 和 `EVIDENCE_MATRIX.md`，补充本轮脚本、配置、数据摘要和证据条目。
+- 主要结果：
+  - 文本风险指数显示，偿债风险在 2021、2022、2024、2025 年为综合文本风险得分最高类别。
+  - 组织传导风险在各年度概率代理得分持续较高，提示子公司、联营、合营、担保等组织网络因素需要进入后续图谱。
+  - 2025 年高权重词包括“债券”“子公司”“投资”“项目”“负债”“减值”“债务”“利息”“担保”。
+- 合规说明：
+  - 风险事件模板仅用于公开、授权或人工合法导出数据的标准化录入。
+  - 不绕过裁判文书网、执行信息公开网、企查查等平台的登录、验证码、付费或访问频率限制。
+- 验证：
+  - `git -c core.longpaths=true diff --check` 通过，仅提示 Windows 换行转换。
+  - `python -m py_compile` 检查 5 个数据脚本通过。
+  - 使用 `course-paper-workflow` 自带 preflight 对拟公开提交文件建立临时审计目录，结果为 `errors=0 warnings=0`。
+  - 直接对完整项目目录运行 preflight 会扫描已忽略的年报全文缓存和中间语料，产生大量公开年报联系人、格式词和长数字链接误报；这些文件不纳入公开仓库。
+- 下一步：
+  - 对公开披露中的诉讼、担保、评级关注事项先做一批可复核样本事件。
+  - 在事件样本基础上生成 Gephi 节点表、边表和 GEXF 风险图谱。
+  - 为财务指标和文本风险指数生成可直接用于报告的图表。

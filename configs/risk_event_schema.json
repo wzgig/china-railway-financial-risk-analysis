@@ -1,0 +1,60 @@
+{
+  "version": "2026-06-29",
+  "compliance_note": "仅使用公开、授权或人工合法导出的数据；不绕过登录、验证码、付费墙、robots 限制或平台访问频率限制。",
+  "source_types": [
+    "wenshu",
+    "execution",
+    "qcc",
+    "annual_report",
+    "announcement",
+    "rating_report",
+    "manual_check"
+  ],
+  "risk_types": [
+    "liquidity",
+    "solvency",
+    "operation",
+    "profitability",
+    "project",
+    "compliance",
+    "market",
+    "organizational_propagation"
+  ],
+  "event_types": [
+    "civil_litigation",
+    "administrative_penalty",
+    "execution_case",
+    "dishonest_judgment_debtor",
+    "restricted_consumption",
+    "guarantee",
+    "rating_action",
+    "asset_impairment",
+    "major_contract",
+    "other"
+  ],
+  "fields": [
+    {"name": "event_id", "required": true, "description": "事件唯一编号，例如 EV2025-0001"},
+    {"name": "source_type", "required": true, "description": "来源类型：wenshu/execution/qcc/annual_report/announcement/rating_report/manual_check"},
+    {"name": "source_name", "required": true, "description": "平台名称或文件名称"},
+    {"name": "source_url", "required": false, "description": "原始链接或本地来源文件路径"},
+    {"name": "access_date", "required": true, "description": "YYYY-MM-DD"},
+    {"name": "search_keyword", "required": false, "description": "检索使用的关键词"},
+    {"name": "company_name", "required": true, "description": "标准化后的公司或子公司名称"},
+    {"name": "company_role", "required": false, "description": "主体角色，例如被告、原告、被执行人、担保方、发行人等"},
+    {"name": "related_party", "required": false, "description": "对手方、债权人、法院、发行人或项目公司"},
+    {"name": "event_type", "required": true, "description": "事件类型，使用 schema 中的 event_types"},
+    {"name": "risk_type", "required": true, "description": "风险类型，使用 schema 中的 risk_types"},
+    {"name": "event_date", "required": false, "description": "事件日期，精确日期未知时可填年份"},
+    {"name": "year", "required": true, "description": "事件年份"},
+    {"name": "province", "required": false, "description": "省份或区域"},
+    {"name": "city", "required": false, "description": "城市"},
+    {"name": "case_no", "required": false, "description": "案号或公告编号"},
+    {"name": "cause", "required": false, "description": "案由或事件原因"},
+    {"name": "amount_rmb", "required": false, "description": "涉及金额，单位为人民币元"},
+    {"name": "summary", "required": true, "description": "事实摘要，避免加入无法核验的判断"},
+    {"name": "severity_score", "required": false, "description": "影响程度评分 1-5，模型完善前可人工赋值"},
+    {"name": "probability_score", "required": false, "description": "发生概率评分 1-5，模型完善前可人工赋值"},
+    {"name": "evidence_status", "required": true, "description": "证据状态：core/candidate/verify/exclude"},
+    {"name": "notes", "required": false, "description": "局限、人工复核或去重说明"}
+  ]
+}
