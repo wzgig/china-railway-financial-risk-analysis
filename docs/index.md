@@ -38,6 +38,8 @@ description: 风险图谱、文本指标与机器学习预警的课程项目规�
 - [年报文本风险语料初筛](RISK_TEXT_CORPUS_SUMMARY.md)
 - [文本风险指标计算结果](TEXT_RISK_INDEX.md)
 - [风险事件采集模板](RISK_EVENT_COLLECTION_TEMPLATE.md)
+- [官方披露风险事件种子样本](OFFICIAL_RISK_EVENTS_SAMPLE.md)
+- [风险图谱预览](RISK_NETWORK_PREVIEW.md)
 - [格式模板提取记录](FORMAT_TEMPLATE_NOTES.md)
 - [风险指标框架](RISK_INDICATOR_FRAMEWORK.md)
 - [数据字典](DATA_DICTIONARY.md)

@@ -168,3 +168,30 @@
   - 对公开披露中的诉讼、担保、评级关注事项先做一批可复核样本事件。
   - 在事件样本基础上生成 Gephi 节点表、边表和 GEXF 风险图谱。
   - 为财务指标和文本风险指数生成可直接用于报告的图表。
+
+## 2026-06-29 官方风险事件种子与图谱预览
+
+- 操作者：Codex
+- 目标：先用官方披露生成可复核风险事件种子样本，并验证 Gephi 图谱输入格式。
+- 已完成：
+  - 扩展 `configs/risk_event_schema.json`，增加 `financial_pressure`、`asset_quality_signal`、`litigation_contingency` 等官方披露事件类型。
+  - 新增 `scripts/build_official_risk_events.py`，从 2021-2025 年财务指标、年报或有事项和联合资信 2025 跟踪评级报告生成官方披露风险事件。
+  - 生成本地事件表 `data/interim/risk_events_official_seed.csv`。
+  - 生成公开摘要 `docs/OFFICIAL_RISK_EVENTS_SAMPLE.md`。
+  - 新增 `scripts/build_risk_network.py`，将风险事件转换为节点表、边表和 Gephi GEXF 文件。
+  - 生成本地 `data/processed/risk_nodes.csv`、`data/processed/risk_edges.csv` 和 `outputs/gephi/china_railway_risk_network.gexf`。
+  - 生成公开摘要 `docs/RISK_NETWORK_PREVIEW.md`。
+  - 更新 README、GitHub Pages 首页、`SOURCES.md` 和 `EVIDENCE_MATRIX.md`。
+- 主要结果：
+  - 生成 17 条官方披露风险事件种子样本。
+  - 种子图谱包含 36 个节点、78 条边。
+  - 当前加权度最高的实体节点为中国中铁股份有限公司，风险类型中合规风险、偿债风险和组织传导风险较突出。
+- 验证：
+  - `python .\scripts\build_official_risk_events.py` 成功生成事件表和公开摘要。
+  - `python .\scripts\build_risk_network.py` 成功生成节点表、边表、GEXF 和公开预览。
+  - `python -m py_compile` 检查新增脚本通过。
+  - 使用临时公开审计目录运行 `course-paper-workflow` preflight，结果为 `errors=0 warnings=0`。
+- 下一步：
+  - 人工核验并补充裁判文书、执行信息和企业风险平台样本。
+  - 用新增事件样本重新计算图谱中心性和社群结构。
+  - 生成财务指标趋势图、文本风险热力图和风险矩阵图。

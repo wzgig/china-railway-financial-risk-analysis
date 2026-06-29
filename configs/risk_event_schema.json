@@ -29,6 +29,9 @@
     "guarantee",
     "rating_action",
     "asset_impairment",
+    "asset_quality_signal",
+    "financial_pressure",
+    "litigation_contingency",
     "major_contract",
     "other"
   ],

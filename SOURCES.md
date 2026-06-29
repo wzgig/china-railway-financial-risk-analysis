@@ -73,6 +73,14 @@
 | `scripts/create_risk_event_template.py` | Python 脚本 | 生成司法、执行、企查查和公告风险事件采集模板 | 已运行 |
 | `data/interim/risk_event_collection_template.csv` | 中间模板 | 风险事件人工或合法导出数据的标准录入表 | 本地生成，不纳入公开仓库 |
 | `docs/RISK_EVENT_COLLECTION_TEMPLATE.md` | 公开说明 | 展示字段说明、检索主体、检索词和 Gephi 衔接方式 | 已生成 |
+| `scripts/build_official_risk_events.py` | Python 脚本 | 从官方年报、财务指标和评级报告生成风险事件种子表 | 已运行 |
+| `data/interim/risk_events_official_seed.csv` | 中间数据 | 官方披露风险事件种子样本 | 本地生成，不纳入公开仓库 |
+| `docs/OFFICIAL_RISK_EVENTS_SAMPLE.md` | 公开摘要 | 展示官方披露风险事件样本、金额和解释边界 | 已生成 |
+| `scripts/build_risk_network.py` | Python 脚本 | 将风险事件表转为节点表、边表和 Gephi GEXF | 已运行 |
+| `data/processed/risk_nodes.csv` | 结构化数据 | Gephi 节点表 | 本地生成，不纳入公开仓库 |
+| `data/processed/risk_edges.csv` | 结构化数据 | Gephi 边表 | 本地生成，不纳入公开仓库 |
+| `outputs/gephi/china_railway_risk_network.gexf` | 图谱文件 | Gephi 可导入风险图谱 | 本地生成，不纳入公开仓库 |
+| `docs/RISK_NETWORK_PREVIEW.md` | 公开摘要 | 展示官方披露种子网络的节点、边和加权度预览 | 已生成 |
 
 ## 来源使用原则
 

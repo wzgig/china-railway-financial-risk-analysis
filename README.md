@@ -59,6 +59,8 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 - 年报文本风险语料初筛：[docs/RISK_TEXT_CORPUS_SUMMARY.md](docs/RISK_TEXT_CORPUS_SUMMARY.md)
 - 文本风险指标计算结果：[docs/TEXT_RISK_INDEX.md](docs/TEXT_RISK_INDEX.md)
 - 风险事件采集模板：[docs/RISK_EVENT_COLLECTION_TEMPLATE.md](docs/RISK_EVENT_COLLECTION_TEMPLATE.md)
+- 官方披露风险事件种子样本：[docs/OFFICIAL_RISK_EVENTS_SAMPLE.md](docs/OFFICIAL_RISK_EVENTS_SAMPLE.md)
+- 风险图谱预览：[docs/RISK_NETWORK_PREVIEW.md](docs/RISK_NETWORK_PREVIEW.md)
 - 格式模板提取记录：[docs/FORMAT_TEMPLATE_NOTES.md](docs/FORMAT_TEMPLATE_NOTES.md)
 
 ## 技能与插件判断
