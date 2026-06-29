@@ -10,6 +10,7 @@
 | 文本风险热力图 | `docs/assets/figures/text_risk_heatmap.png` | 支撑文本风险指标和风险类别排序 |
 | 2025 高权重风险词 | `docs/assets/figures/top_2025_risk_terms.png` | 支撑文本风险词典和年报风险语境解释 |
 | 官方事件风险矩阵 | `docs/assets/figures/risk_event_matrix.png` | 支撑风险发生概率与影响程度二维评估 |
+| 风险图谱中心性导图 | `docs/assets/figures/risk_network_gephi_style.png` | 支撑 Gephi 风险图谱、中心性和风险传导路径解释 |
 
 ## 预览
 
@@ -21,8 +22,10 @@
 
 ![官方事件风险矩阵](assets/figures/risk_event_matrix.png)
 
+![风险图谱中心性导图](assets/figures/risk_network_gephi_style.png)
+
 ## 解释边界
 
 - 图表基于公开年报、评级报告和本地脚本整理结果生成。
-- 当前风险矩阵使用官方披露种子事件，后续加入司法、执行和企业风险样本后应重新生成。
+- 风险矩阵使用官方披露种子事件；风险图谱导图使用官方披露、司法、执行和企查查扩展样本的合并事件表。
 - `outputs/figures/` 保存本地作图副本；`docs/assets/figures/` 用于 GitHub Pages 展示。

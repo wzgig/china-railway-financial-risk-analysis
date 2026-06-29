@@ -25,6 +25,7 @@
 | `build_official_risk_events.py` | 生成官方披露风险事件种子样本 | `data/interim/risk_events_official_seed.csv`、`docs/OFFICIAL_RISK_EVENTS_SAMPLE.md` |
 | `build_external_risk_events.py` | 生成司法、执行、企查查扩展样本并合并事件表 | `data/interim/risk_events_external_sample.csv`、`data/processed/risk_events_combined.csv`、`docs/EXTERNAL_RISK_EVENTS_SAMPLE.md` |
 | `build_risk_network.py` | 基于合并事件表构建 Gephi 节点、边和 GEXF | `data/processed/risk_nodes.csv`、`data/processed/risk_edges.csv`、`outputs/gephi/china_railway_risk_network.gexf` |
+| `analyze_risk_network.py` | 计算中心性、社群和增强版 Gephi 文件，并生成报告导图 | `data/processed/risk_network_centrality.csv`、`outputs/gephi/china_railway_risk_network_enhanced.gexf`、`docs/RISK_NETWORK_CENTRALITY.md` |
 | `build_report_figures.py` | 生成报告图表 | `outputs/figures/`、`docs/assets/figures/`、`docs/FIGURES_CATALOG.md` |
 | `build_warning_model_features.py` | 生成机器学习预警模型年度特征表和规则标签 | `data/processed/model_features_china_railway.csv`、`docs/MODEL_FEATURE_TABLE.md` |
 | `collect_peer_financial_panel.py` | 采集同业建筑上市公司 2021-2025 年财务面板 | `data/processed/peer_financial_panel.csv`、`docs/PEER_FINANCIAL_PANEL.md` |

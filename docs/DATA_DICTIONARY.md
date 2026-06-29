@@ -50,6 +50,22 @@
 | year | int | 年份 |
 | evidence | string | 支撑来源 |
 
+## `risk_network_centrality.csv`
+
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| node_id | string | 节点唯一编号 |
+| label | string | 节点显示名称 |
+| node_type | string | 节点类型 |
+| community | int | Louvain 社群编号 |
+| weighted_degree | float | 加权度，反映连接强度 |
+| in_strength | float | 入边加权强度 |
+| out_strength | float | 出边加权强度 |
+| degree_centrality | float | 度中心性 |
+| betweenness_centrality | float | 中介中心性 |
+| closeness_centrality | float | 接近中心性 |
+| pagerank | float | PageRank 中心性 |
+
 ## `model_features.csv`
 
 | 字段 | 类型 | 说明 |

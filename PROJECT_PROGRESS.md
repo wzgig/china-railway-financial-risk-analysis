@@ -322,3 +322,38 @@
   - 生成或整理模型相关图表，视篇幅纳入报告。
   - 对执行和企查查候选样本继续复核去重。
   - 准备 Gephi 最终导图、Word/PDF 输出和 3 分钟视频。
+
+## 2026-06-29 Gephi 最终导图与完整 Markdown 草稿
+
+- 操作者：Codex
+- 用户要求：
+  - 下一步做 Gephi 最终导图和中心性解释。
+  - 撰写完整报告的草稿版，暂不做 Word 版。
+- 已完成：
+  - 使用本地 `course-paper-workflow` skill 对齐课程论文工作流。
+  - 新增 `scripts/analyze_risk_network.py`，基于 `risk_nodes.csv` 和 `risk_edges.csv` 计算加权度、中介中心性、接近中心性、PageRank 和 Louvain 社群。
+  - 生成本地中心性表 `data/processed/risk_network_centrality.csv`，共 77 个节点。
+  - 生成本地社群摘要 `data/processed/risk_network_communities.csv`、Top 中心性表 `outputs/tables/risk_network_top_centrality.csv`。
+  - 生成增强版 Gephi 文件 `outputs/gephi/china_railway_risk_network_enhanced.gexf`。
+  - 生成报告导图 `outputs/figures/risk_network_gephi_style.png` 和 GitHub Pages 图 `docs/assets/figures/risk_network_gephi_style.png`。
+  - 生成公开摘要 `docs/RISK_NETWORK_CENTRALITY.md`，包含 Gephi 操作建议、中心性解释和边界说明。
+  - 更新 `paper/draft.md`，将阶段性草稿扩写为完整 Markdown 草稿，新增风险图谱中心性分析、风险传导路径解释、研究结论、局限性与数据合规说明。
+  - 更新 README、GitHub Pages 首页、图表目录、数据字典、来源记录、证据矩阵、完成度审计、脚本 README 和详细大纲。
+- 主要结果：
+  - 图谱规模：77 个节点、133 条边。
+  - 加权度最高节点：中国中铁股份有限公司 60.0000、合规风险 29.0000、流动性风险 24.0000。
+  - 中介中心性最高节点：中国中铁股份有限公司 0.317592、合规风险 0.285370、2023 年 0.270188、流动性风险 0.133582。
+  - PageRank 最高风险类型：流动性风险 0.051289、合规风险 0.051004。
+  - 社群结构显示，执行和流动性事件、合规和诉讼事件、官方披露和组织传导风险分别形成较清晰的风险团簇。
+- 解释边界：
+  - 当前执行和企查查样本中仍有候选或待复核条目，中心性排序用于课程报告的风险线索解释，不作为法律事实或投资结论。
+  - 当前报告为 Markdown 完整草稿，尚未生成 Word/PDF。
+- 验证：
+  - `python -m py_compile .\scripts\analyze_risk_network.py` 通过。
+  - `python .\scripts\analyze_risk_network.py` 成功生成中心性表、增强 GEXF、导图和公开摘要。
+  - 已人工查看 `docs/assets/figures/risk_network_gephi_style.png`，导图可读，图例和说明不重叠。
+  - `git -c core.longpaths=true diff --check` 通过，仅有 Windows 换行提示。
+  - 使用 `course-paper-workflow` preflight 在临时公开审计目录运行，剩余 2 个误报：均为巨潮资讯 PDF URL 中的长数字文件编号，不是个人信息。
+- 下一步：
+  - 视时间补充弹性风险管理模型或模型图表。
+  - 准备最终 Word/PDF 版和 3 分钟视频素材。

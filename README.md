@@ -63,6 +63,7 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 - 官方披露风险事件种子样本：[docs/OFFICIAL_RISK_EVENTS_SAMPLE.md](docs/OFFICIAL_RISK_EVENTS_SAMPLE.md)
 - 司法/执行/企查查扩展样本：[docs/EXTERNAL_RISK_EVENTS_SAMPLE.md](docs/EXTERNAL_RISK_EVENTS_SAMPLE.md)
 - 风险图谱预览：[docs/RISK_NETWORK_PREVIEW.md](docs/RISK_NETWORK_PREVIEW.md)
+- Gephi 最终导图与中心性解释：[docs/RISK_NETWORK_CENTRALITY.md](docs/RISK_NETWORK_CENTRALITY.md)
 - 机器学习预警特征表：[docs/MODEL_FEATURE_TABLE.md](docs/MODEL_FEATURE_TABLE.md)
 - 同业财务面板：[docs/PEER_FINANCIAL_PANEL.md](docs/PEER_FINANCIAL_PANEL.md)
 - 财务风险预警基线模型：[docs/FINANCIAL_WARNING_MODEL.md](docs/FINANCIAL_WARNING_MODEL.md)
