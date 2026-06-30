@@ -27,7 +27,7 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 ├─ LITERATURE_SEARCH_RECORD.md      # 文献与数据检索记录模板
 ├─ EVIDENCE_MATRIX.md               # 证据矩阵模板
 ├─ COURSE_PAPER_DETAILED_OUTLINE.md # 报告详细大纲
-├─ docs/                            # 方法、数据字典、工具规划、视频脚本
+├─ docs/                            # 方法说明、数据字典、图表和视频脚本
 ├─ data/raw/                        # 原始数据，保留下载或导出文件
 ├─ data/interim/                    # 清洗中间结果
 ├─ data/processed/                  # 建模与作图最终数据
@@ -49,7 +49,7 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 7. 训练风险预警模型，输出模型性能、特征重要性和中国中铁风险预测结果。
 8. 完成报告、图表、视频脚本和最终视频。
 
-## 当前阶段产物
+## 已有材料
 
 - 草稿版报告：[paper/draft.md](paper/draft.md)
 - GB/T 7714 参考文献清单：[paper/references_gbt7714.md](paper/references_gbt7714.md)
@@ -71,13 +71,3 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 - 弹性风险管理模型：[docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md](docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md)
 - 图表目录：[docs/FIGURES_CATALOG.md](docs/FIGURES_CATALOG.md)
 - 格式模板提取记录：[docs/FORMAT_TEMPLATE_NOTES.md](docs/FORMAT_TEMPLATE_NOTES.md)
-
-## 技能与插件判断
-
-当前已使用本地 `course-paper-workflow` skill 做课程项目规划，不需要额外下载新的 skill 或插件。后续若进入具体阶段，可按需使用本地已有能力：
-
-- 文献与引用：`citation-management`、`bib-search-citation`。
-- Python 测试与调试：`python-testing-patterns`、`debugging-strategies`。
-- 表格与论文排版：`table-generation`、`pdf`、`course-paper-workflow`。
-- 本地网页或交互测试：`playwright`、`browser:control-in-app-browser`。
-- 视频旁白：`speech`，仅在需要生成配音时使用。

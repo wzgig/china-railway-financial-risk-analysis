@@ -294,7 +294,7 @@ def write_markdown(
     lines = [
         "# Word2Vec 风险词扩充结果",
         "",
-        "生成脚本：`scripts/build_word2vec_risk_terms.py`",
+        "复现脚本：`scripts/build_word2vec_risk_terms.py`",
         "",
         "## 方法",
         "",
@@ -342,14 +342,14 @@ def write_markdown(
     lines.extend(
         [
             "",
-            "## 输出文件",
+            "## 复现产物",
             "",
             "- 扩展词典：`configs/risk_terms_expanded.json`。",
             "- 候选词明细：`data/processed/word2vec_risk_terms.csv`，本地生成，不纳入公开仓库。",
             "- 扩展文本风险指数：`data/processed/text_risk_index_word2vec_by_year.csv`，本地生成，不纳入公开仓库。",
             "- 扩展词年度明细：`data/processed/text_risk_terms_word2vec_by_year.csv`，本地生成，不纳入公开仓库。",
             "",
-            "## 解释边界",
+            "## 使用边界",
             "",
             "- 年报语料属于单公司公开披露文本，模型学到的是披露语境相似性，不等同于真实风险因果关系。",
             "- Word2Vec 候选词可能包含行业中性词，正式报告引用前需人工筛选。",

@@ -259,12 +259,12 @@ def write_markdown(events: list[dict[str, str]]) -> Path:
     lines = [
         "# 官方披露风险事件种子样本",
         "",
-        "生成脚本：`scripts/build_official_risk_events.py`",
+        "复现脚本：`scripts/build_official_risk_events.py`",
         "",
-        "## 样本边界",
+        "## 样本口径",
         "",
         "- 本表仅来自中国中铁年报、财务指标整理结果和联合资信跟踪评级报告。",
-        "- 当前样本用于搭建风险图谱结构，不替代裁判文书、执行信息或企业风险平台的逐条事件核验。",
+        "- 该样本用于搭建风险图谱结构，不替代裁判文书、执行信息或企业风险平台的逐条事件核验。",
         "- 金额均按人民币元进入本地 CSV；下表为便于阅读换算为亿元。",
         "",
         "## 样本摘要",
@@ -290,7 +290,7 @@ def write_markdown(events: list[dict[str, str]]) -> Path:
             "## 后续用法",
             "",
             "- 本地完整事件表：`data/interim/risk_events_official_seed.csv`，不纳入公开仓库。",
-            "- 下一步可将人工核验的司法、执行、公告和企业风险事件追加到同一字段结构。",
+            "- 后续可将人工核验的司法、执行、公告和企业风险事件追加到同一字段结构。",
             "- 图谱脚本会把 `company_name`、`event_id`、`risk_type`、`year`、`related_party` 转换为节点，并按影响程度与概率评分生成边权重。",
         ]
     )

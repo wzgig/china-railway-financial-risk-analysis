@@ -106,7 +106,7 @@ def build_summary(rows: list[dict[str, str | int]]) -> str:
     lines = [
         "# 年报文本风险语料初筛摘要",
         "",
-        "生成脚本：`scripts/extract_risk_text_corpus.py`",
+        "复现脚本：`scripts/extract_risk_text_corpus.py`",
         "",
         "本文件基于 `configs/risk_seed_terms.json` 的种子词，在 2021-2025 年年报文本缓存中抽取命中片段。它是后续 jieba 分词、Word2Vec 扩词和风险词频权重计算的前置语料，不等同于最终风险得分。",
         "",

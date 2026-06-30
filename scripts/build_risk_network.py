@@ -171,9 +171,9 @@ def write_markdown(nodes: list[dict[str, str]], edges: list[dict[str, str]]) -> 
     lines = [
         "# 风险图谱预览",
         "",
-        "生成脚本：`scripts/build_risk_network.py`",
+        "复现脚本：`scripts/build_risk_network.py`",
         "",
-        "## 输出文件",
+        "## 复现产物",
         "",
         "- 本地节点表：`data/processed/risk_nodes.csv`",
         "- 本地边表：`data/processed/risk_edges.csv`",
@@ -203,7 +203,7 @@ def write_markdown(nodes: list[dict[str, str]], edges: list[dict[str, str]]) -> 
     lines.extend(
         [
             "",
-            "## 解释边界",
+            "## 使用边界",
             "",
             "- 当前图谱优先使用官方披露、司法、执行和企查查扩展样本的合并事件表。",
             "- 其中候选和待复核样本仍需人工复核，节点中心性只能作为课程阶段性风险线索。",

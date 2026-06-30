@@ -291,7 +291,7 @@ def write_markdown(rows: list[dict[str, str | int | float]], source_messages: li
     lines = [
         "# 中国中铁财务风险指标数据集",
         "",
-        "生成脚本：`scripts/extract_financial_indicators.py`",
+        "复现脚本：`scripts/extract_financial_indicators.py`",
         "",
         "单位说明：金额单位为亿元人民币；比例单位为 `%`；利息保障倍数为倍。",
         "",

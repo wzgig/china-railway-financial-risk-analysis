@@ -1,6 +1,6 @@
 # 风险事件采集合规模板
 
-生成脚本：`scripts/create_risk_event_template.py`
+复现脚本：`scripts/create_risk_event_template.py`
 
 版本：`2026-06-29`
 

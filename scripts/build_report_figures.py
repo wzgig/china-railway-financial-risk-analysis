@@ -192,7 +192,7 @@ def write_catalog() -> Path:
     lines = [
         "# 图表目录",
         "",
-        "生成脚本：`scripts/build_report_figures.py`",
+        "复现脚本：`scripts/build_report_figures.py`",
         "",
         "## 可用于报告的图表",
         "",
@@ -213,7 +213,7 @@ def write_catalog() -> Path:
         "",
         "![官方事件风险矩阵](assets/figures/risk_event_matrix.png)",
         "",
-        "## 解释边界",
+        "## 使用边界",
         "",
         "- 图表基于公开年报、评级报告和本地脚本整理结果生成。",
         "- 当前风险矩阵使用官方披露种子事件，后续加入司法、执行和企业风险样本后应重新生成。",

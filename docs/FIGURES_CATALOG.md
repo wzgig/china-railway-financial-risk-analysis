@@ -1,6 +1,6 @@
 # 图表目录
 
-生成脚本：`scripts/build_report_figures.py`、`scripts/analyze_risk_network.py`、`scripts/build_resilience_model.py`
+复现脚本：`scripts/build_report_figures.py`、`scripts/analyze_risk_network.py`、`scripts/build_resilience_model.py`
 
 ## 可用于报告的图表
 
@@ -30,7 +30,7 @@
 
 ![风险韧性评分趋势](assets/figures/resilience_score_trend.png)
 
-## 解释边界
+## 使用边界
 
 - 图表基于公开年报、评级报告和本地脚本整理结果生成。
 - 风险矩阵使用官方披露种子事件；风险图谱导图使用官方披露、司法、执行和企查查扩展样本的合并事件表。

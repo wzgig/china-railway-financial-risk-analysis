@@ -16,7 +16,7 @@
 | 2022 | 年度报告 | 中国中铁2022年年度报告 | 2023-03-31 | 中国中铁股份有限公司官网 | `2022_annual_report.pdf` | https://www.crec.cn/web/fileDir/resource/cms/article/10090220/10247328/%E4%B8%AD%E5%9B%BD%E4%B8%AD%E9%93%812022%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf |
 | 2021 | 年度报告 | 中国中铁2021年年度报告 | 2022-03-31 | 中国中铁股份有限公司官网 | `2021_annual_report.pdf` | https://www.crec.cn/web/fileDir/resource/cms/article/10090220/10193023/%E4%B8%AD%E5%9B%BD%E4%B8%AD%E9%93%812021%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A%EF%BC%88A%E8%82%A1%E4%B8%AD%E6%96%87%E7%AE%80%E4%BD%93%EF%BC%89.pdf |
 
-## 本轮校验
+## 校验记录
 
 - 已下载文件数量：7。
 - `python -m py_compile .\scripts\collect_official_reports.py` 通过。

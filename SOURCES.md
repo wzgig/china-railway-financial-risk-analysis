@@ -8,7 +8,6 @@
 |---|---|---|---|---|
 | L1 | 本地课程要求截图 | 课程要求截图 | 提取项目六项要求 | 已使用，原始截图不纳入公开仓库 |
 | L2 | 本地课程要求 Markdown | Markdown | 原始要求文件，但编码乱码 | 保留本地原件，不纳入公开仓库 |
-| L3 | 本地 `course-paper-workflow` skill | 本地工作流 | 课程论文项目规划、来源记录、质量门槛 | 已使用 |
 
 ## 已查验公开来源
 
@@ -34,7 +33,7 @@
 | 企业风险 | 企查查或同类平台合法导出 | 行政处罚、经营异常、股权冻结、司法协助 |
 | 学术文献 | CNKI、万方、Google Scholar、学校数据库 | 财务风险预警、文本风险指标、复杂网络风险传导方法 |
 
-## 本轮新增核心文献与标准
+## 新增核心文献与标准
 
 | 编号 | 来源 | 链接 | 用途 | 状态 |
 |---|---|---|---|---|
@@ -44,7 +43,7 @@
 | R4 | GB/T 7714-2025 官方标准信息 | https://std.samr.gov.cn/gb/search/gbDetailed?id=4507EFE13D37CB6AE06397BE0A0A601F | 参考文献格式依据 | core |
 | R5 | Crossref DOI 元数据 | https://api.crossref.org/ | 校验英文期刊、会议论文 DOI 与元数据 | core |
 
-## 本轮生成的引用文件
+## 已生成的引用文件
 
 | 文件 | 用途 |
 |---|---|
@@ -53,7 +52,7 @@
 | `paper/references.bib` | BibTeX/LaTeX/Typst 可用参考文献库 |
 | `paper/references_gbt7714.md` | GB/T 7714 顺序编码制参考文献清单 |
 
-## 本轮生成的数据与脚本
+## 已生成的数据与脚本
 
 | 文件 | 类型 | 用途 | 状态 |
 |---|---|---|---|
@@ -68,7 +67,7 @@
 | `scripts/build_text_risk_index.py` | Python 脚本 | 计算 2021-2025 年年报文本风险类别得分和高权重词 | 已运行 |
 | `data/processed/text_risk_index_by_year.csv` | 结构化数据 | 年度风险类别综合得分和概率代理得分 | 本地生成，不纳入公开仓库 |
 | `data/processed/text_risk_terms_by_year.csv` | 结构化数据 | 年度高权重风险词、权重和命中次数 | 本地生成，不纳入公开仓库 |
-| `docs/TEXT_RISK_INDEX.md` | 公开摘要 | 展示文本风险指标计算方法、年度结果和解释边界 | 已生成 |
+| `docs/TEXT_RISK_INDEX.md` | 公开摘要 | 展示文本风险指标计算方法、年度结果和使用边界 | 已生成 |
 | `scripts/build_word2vec_risk_terms.py` | Python 脚本 | 训练年报 Word2Vec 模型，扩充风险词典并计算扩展文本风险指数 | 已运行 |
 | `configs/risk_terms_expanded.json` | 配置文件 | 种子词与 Word2Vec 候选扩展词合并后的风险词典 | 已创建 |
 | `data/processed/word2vec_risk_terms.csv` | 结构化数据 | Word2Vec 候选扩展词、来源种子词、相似度和语料命中次数 | 本地生成，不纳入公开仓库 |
@@ -80,7 +79,7 @@
 | `docs/RISK_EVENT_COLLECTION_TEMPLATE.md` | 公开说明 | 展示字段说明、检索主体、检索词和 Gephi 衔接方式 | 已生成 |
 | `scripts/build_official_risk_events.py` | Python 脚本 | 从官方年报、财务指标和评级报告生成风险事件种子表 | 已运行 |
 | `data/interim/risk_events_official_seed.csv` | 中间数据 | 官方披露风险事件种子样本 | 本地生成，不纳入公开仓库 |
-| `docs/OFFICIAL_RISK_EVENTS_SAMPLE.md` | 公开摘要 | 展示官方披露风险事件样本、金额和解释边界 | 已生成 |
+| `docs/OFFICIAL_RISK_EVENTS_SAMPLE.md` | 公开摘要 | 展示官方披露风险事件样本、金额和使用边界 | 已生成 |
 | `scripts/build_risk_network.py` | Python 脚本 | 将风险事件表转为节点表、边表和 Gephi GEXF | 已运行 |
 | `data/processed/risk_nodes.csv` | 结构化数据 | Gephi 节点表 | 本地生成，不纳入公开仓库 |
 | `data/processed/risk_edges.csv` | 结构化数据 | Gephi 边表 | 本地生成，不纳入公开仓库 |
@@ -89,13 +88,13 @@
 | `scripts/analyze_risk_network.py` | Python 脚本 | 计算图谱中心性、社群、增强 GEXF 和报告导图 | 已运行 |
 | `data/processed/risk_network_centrality.csv` | 结构化数据 | 节点加权度、中介中心性、PageRank 和社群编号 | 本地生成，不纳入公开仓库 |
 | `outputs/gephi/china_railway_risk_network_enhanced.gexf` | 图谱文件 | 含中心性属性的增强版 Gephi 文件 | 本地生成，不纳入公开仓库 |
-| `docs/RISK_NETWORK_CENTRALITY.md` | 公开摘要 | 展示 Gephi 最终导图、中心性结果和解释边界 | 已生成 |
+| `docs/RISK_NETWORK_CENTRALITY.md` | 公开摘要 | 展示 Gephi 最终导图、中心性结果和使用边界 | 已生成 |
 | `scripts/build_report_figures.py` | Python 脚本 | 生成财务趋势、文本风险热力图、风险词和风险矩阵图 | 已运行 |
 | `outputs/figures/*.png` | 本地图表 | 报告插图本地副本 | 本地生成，不纳入公开仓库 |
 | `docs/assets/figures/*.png` | 公开图表 | GitHub Pages 可展示图表 | 已生成 |
-| `docs/FIGURES_CATALOG.md` | 公开摘要 | 展示图表用途、预览和解释边界 | 已生成 |
+| `docs/FIGURES_CATALOG.md` | 公开摘要 | 展示图表用途、预览和使用边界 | 已生成 |
 
-## 本轮新增外部风险事件来源
+## 新增外部风险事件来源
 
 | 编号 | 来源 | 链接 | 用途 | 状态 |
 |---|---|---|---|---|
@@ -107,14 +106,14 @@
 | X6 | 经济参考网/新浪财经转引天眼查 | https://finance.sina.com.cn/stock/relnews/cn/2025-05-09/doc-inevxzxu7563170.shtml | 中铁三局桥隧新增被执行人样本 | candidate |
 | X7 | 财中社转引企查查 | https://m.caizhongshe.cn/article-7332928644422008550.html | 中铁隧道局行政处罚、被执行人和短期新增执行案件汇总样本 | verify |
 
-## 本轮新增同业面板与机器学习来源
+## 新增同业面板与机器学习来源
 
 | 编号 | 来源 | 链接 | 用途 | 状态 |
 |---|---|---|---|---|
 | M1 | 东方财富 HSF10 财务分析接口 | https://emweb.securities.eastmoney.com/PC_HSF10/NewFinanceAnalysis/ZYZBAjaxNew | 采集 11 家建筑工程类上市公司 2021-2025 年同业财务面板 | candidate，二级财经数据源 |
 | M2 | scikit-learn | https://scikit-learn.org/ | Logistic Regression、Random Forest、指标评估和模型管线 | core，本地包版本 1.8.0 |
 
-## 本轮新增脚本和数据产物
+## 新增脚本和数据产物
 
 | 文件 | 类型 | 用途 | 状态 |
 |---|---|---|---|
@@ -134,14 +133,14 @@
 | `outputs/tables/warning_model_*.csv` | 评估表 | 模型指标和特征重要性 | 本地生成，不纳入公开仓库 |
 | `docs/FINANCIAL_WARNING_MODEL.md` | 公开摘要 | 展示模型设计、测试集表现、特征重要性和中国中铁预测结果 | 已生成 |
 
-## 本轮新增弹性风险管理模型产物
+## 新增弹性风险管理模型产物
 
 | 文件 | 类型 | 用途 | 状态 |
 |---|---|---|---|
 | `scripts/build_resilience_model.py` | Python 脚本 | 基于财务指标、年度事件特征和风险图谱中心性构建四维风险缓冲能力评分 | 已运行 |
 | `data/processed/resilience_scores.csv` | 处理后数据 | 中国中铁 2021-2025 年财务缓冲、经营缓冲、治理信用缓冲、网络韧性和综合韧性评分 | 本地生成，不纳入公开仓库 |
 | `outputs/tables/resilience_scores.csv` | 报告表格 | 弹性风险管理模型评分表副本 | 本地生成，不纳入公开仓库 |
-| `docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md` | 公开摘要 | 展示模型定位、评分口径、年度结果、图表和管理动作映射 | 已生成 |
+| `docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md` | 公开摘要 | 展示研究口径、评分口径、年度结果、图表和管理动作映射 | 已生成 |
 | `docs/assets/figures/resilience_radar_2025.png` | 公开图表 | 展示 2025 年四维风险缓冲能力雷达图 | 已生成 |
 | `docs/assets/figures/resilience_score_trend.png` | 公开图表 | 展示 2021-2025 年综合韧性和分维度趋势 | 已生成 |
 

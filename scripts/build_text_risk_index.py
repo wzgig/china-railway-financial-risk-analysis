@@ -179,7 +179,7 @@ def write_markdown(index_rows: list[dict[str, object]], term_rows: list[dict[str
     lines = [
         "# 文本风险指标计算结果",
         "",
-        "生成脚本：`scripts/build_text_risk_index.py`",
+        "复现脚本：`scripts/build_text_risk_index.py`",
         "",
         "方法：对 2021-2025 年年报文本进行 jieba 分词，使用 `jieba.analyse.extract_tags(..., withWeight=True)` 获取 TF-IDF 风格权重，并结合种子词精确命中次数构造文本风险代理指标。",
         "",
@@ -233,7 +233,7 @@ def write_markdown(index_rows: list[dict[str, object]], term_rows: list[dict[str
     lines.extend(
         [
             "",
-            "## 解释边界",
+            "## 使用边界",
             "",
             "- 文本风险指标反映年报披露语境中的风险关注度，不等同于实际损失概率。",
             "- `combined_text_risk_score` 是课程分析用代理变量，后续应与财务指标、司法事件和图谱中心性共同解释。",

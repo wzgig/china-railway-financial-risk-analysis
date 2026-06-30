@@ -1,8 +1,8 @@
 # Gephi 最终导图与中心性解释
 
-生成脚本：`scripts/analyze_risk_network.py`
+复现脚本：`scripts/analyze_risk_network.py`
 
-## 输出文件
+## 复现产物
 
 - 增强版 Gephi 文件：`outputs/gephi/china_railway_risk_network_enhanced.gexf`
 - 节点中心性表：`data/processed/risk_network_centrality.csv`
@@ -87,7 +87,7 @@
 
 ## 中心性解释
 
-- 加权度刻画节点与风险事件、风险类型、年份、来源之间的总体连接强度。中国中铁股份有限公司加权度最高，说明当前样本仍以母公司官方披露和合并事件为主。
+- 加权度刻画节点与风险事件、风险类型、年份、来源之间的总体连接强度。中国中铁股份有限公司加权度最高，说明该样本仍以母公司官方披露和合并事件为主。
 - 合规风险和流动性风险在风险类型节点中更靠前，说明诉讼、执行、限制消费和供应链付款类事件已经成为图谱中的主要外部风险线索。
 - 中介中心性较高的节点连接多个事件、年份和风险类型，适合解释风险传导中的桥接作用；若子公司或相关方节点中介中心性上升，应作为后续复核重点。
 - PageRank 更偏向识别被高权重事件指向的稳定核心节点，适合与加权度共同判断关键风险类别。
@@ -100,7 +100,7 @@
 4. 布局可先用 `ForceAtlas2`，勾选 `LinLog mode` 与 `Prevent overlap`；稳定后再用 `Label Adjust`。
 5. 统计面板中重点查看 `weighted_degree`、`betweenness_centrality`、`pagerank` 与 `community` 字段。
 
-## 解释边界
+## 使用边界
 
 - 图谱使用官方披露、司法、执行和企查查扩展样本的合并事件表。
 - 当前执行和企查查部分样本仍有 `candidate` 或 `verify` 状态，中心性结果用于课程报告的风险线索解释，不应作为法律事实或投资结论。

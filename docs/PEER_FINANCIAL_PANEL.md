@@ -1,6 +1,6 @@
 # 同业上市建筑企业财务面板
 
-生成脚本：`scripts/collect_peer_financial_panel.py`
+复现脚本：`scripts/collect_peer_financial_panel.py`
 
 ## 数据来源与边界
 
