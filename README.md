@@ -52,6 +52,8 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 ## 已有材料
 
 - 草稿版报告：[paper/draft.md](paper/draft.md)
+- Word 草稿：[paper/course_paper_draft.docx](paper/course_paper_draft.docx)
+- PDF 预览稿：[paper/course_paper_draft.pdf](paper/course_paper_draft.pdf)
 - GB/T 7714 参考文献清单：[paper/references_gbt7714.md](paper/references_gbt7714.md)
 - EndNote RIS 文件：[paper/references.ris](paper/references.ris)
 - 官方报告下载清单：[docs/OFFICIAL_REPORTS_MANIFEST.md](docs/OFFICIAL_REPORTS_MANIFEST.md)

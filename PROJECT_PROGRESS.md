@@ -70,10 +70,18 @@
 - 将公开说明中的脚本说明改为复现口径，强化研究可复现性而不是过程展示感。
 - 调整 README、任务计划、项目要求、来源清单、报告草稿和 Pages 索引，提高文档的正式研究记录感。
 
+## 2026-06-30 报告草稿排版与视频材料
+
+- 编写 `scripts/build_course_paper_docx.py`，从 `paper/draft.md` 和 `paper/references_gbt7714.md` 生成 Word/PDF 草稿。
+- 生成 `paper/course_paper_draft.docx` 和 `paper/course_paper_draft.pdf`，并对首页、摘要页、图表页、弹性模型页和参考文献页进行渲染检查。
+- 修正草稿中的图题编号、弹性评分表述、正文对齐、参考文献悬挂缩进和表格转换溢出问题。
+- 扩充 `docs/VIDEO_STORYBOARD.md`，形成 3 分钟展示视频的时间轴、旁白稿和素材清单。
+- 更新 `scripts/README.md`、`paper/README.md` 和 `COURSE_REQUIREMENTS_AUDIT.md`，使公开说明与当前成果一致。
+
 ## 当前完成度判断
 
-- 已基本完成：经营特征与风险机制、风险事件采集与图谱、文本风险指标、Word2Vec 扩词、机器学习预警模型、弹性风险管理模型、完整 Markdown 草稿和主要报告图表。
-- 尚需完成：Word/PDF 终稿排版、3 分钟视频成片、执行和企查查候选样本复核。
+- 已基本完成：经营特征与风险机制、风险事件采集与图谱、文本风险指标、Word2Vec 扩词、机器学习预警模型、弹性风险管理模型、完整 Markdown 草稿、Word/PDF 草稿和主要报告图表。
+- 尚需完成：最终封面信息与目录校对、3 分钟视频成片、执行和企查查候选样本复核。
 
 ## 验证记录
 

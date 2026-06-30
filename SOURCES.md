@@ -144,6 +144,16 @@
 | `docs/assets/figures/resilience_radar_2025.png` | 公开图表 | 展示 2025 年四维风险缓冲能力雷达图 | 已生成 |
 | `docs/assets/figures/resilience_score_trend.png` | 公开图表 | 展示 2021-2025 年综合韧性和分维度趋势 | 已生成 |
 
+## 报告排版与展示材料
+
+| 文件或工具 | 类型 | 用途 | 状态 |
+|---|---|---|---|
+| `scripts/build_course_paper_docx.py` | Python 脚本 | 合并 Markdown 草稿和 GB/T 7714 参考文献，生成 Word/PDF 草稿 | 已运行 |
+| `paper/course_paper_draft.docx` | 报告草稿 | Word 排版预览，供后续补封面信息和人工校对 | 已生成 |
+| `paper/course_paper_draft.pdf` | 报告草稿 | PDF 预览稿，用于页面渲染检查 | 已生成 |
+| `docs/VIDEO_STORYBOARD.md` | 展示材料 | 3 分钟视频时间轴、旁白稿和素材清单 | 已生成 |
+| Pandoc、LibreOffice、Poppler | 本地工具 | Markdown 转 Word、Word 转 PDF 和 PDF 页面渲染检查 | 本地使用 |
+
 ## 来源使用原则
 
 1. 优先使用官方披露和可复核文件。

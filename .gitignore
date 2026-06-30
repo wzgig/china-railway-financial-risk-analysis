@@ -20,6 +20,7 @@ outputs/figures/*
 outputs/models/*
 outputs/tables/*
 outputs/video/*
+outputs/docx/*
 logs/*
 
 # Keep directory docs via README files
@@ -30,6 +31,7 @@ logs/*
 !outputs/models/.gitkeep
 !outputs/tables/.gitkeep
 !outputs/video/.gitkeep
+!outputs/docx/.gitkeep
 !logs/.gitkeep
 
 # Office temporary files

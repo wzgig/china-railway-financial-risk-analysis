@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 中国中铁财务风险管理分析
-description: 风险图谱、文本指标与机器学习预警的课程项目规划
+description: 风险图谱、文本指标与机器学习预警的课程项目材料
 ---
 
 # 中国中铁财务风险管理分析
@@ -32,6 +32,8 @@ description: 风险图谱、文本指标与机器学习预警的课程项目规�
 ## 核心文档
 
 - [草稿版报告](https://github.com/wzgig/china-railway-financial-risk-analysis/blob/main/paper/draft.md)
+- [Word 草稿](https://github.com/wzgig/china-railway-financial-risk-analysis/blob/main/paper/course_paper_draft.docx)
+- [PDF 预览稿](https://github.com/wzgig/china-railway-financial-risk-analysis/blob/main/paper/course_paper_draft.pdf)
 - [GB/T 7714 参考文献清单](https://github.com/wzgig/china-railway-financial-risk-analysis/blob/main/paper/references_gbt7714.md)
 - [官方报告下载清单](OFFICIAL_REPORTS_MANIFEST.md)
 - [初始财务指标表](FINANCIAL_INDICATORS_INITIAL.md)
