@@ -103,6 +103,7 @@
 - 删除正文中的“课程研究”“候选/待复核”“candidate/verify”“可能”等不适合终稿呈现的表达，改为证据权重、研究边界和管理含义的正式表述。
 - 同步生成 `paper/course_paper_formatted.docx`、`paper/course_paper_formatted.pdf`、`paper/course_paper_draft.docx` 和 `paper/course_paper_draft.pdf`。
 - 渲染检查摘要页、目录页、正文首页、结论页和参考文献页，格式稿为 23 页 A4，正文页脚显示为“第 X 页 共 19 页”。
+- 将图谱段落中偏过程化的 GEXF/导图生成表述改为网络测度解释，突出加权度、中介中心性、PageRank 和 Louvain 社群划分的分析含义。
 
 ## 当前完成度判断
 
