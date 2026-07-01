@@ -158,6 +158,9 @@
 | `scripts/build_course_paper_docx.py` | Python 脚本 | 合并 Markdown 草稿和 GB/T 7714 参考文献，生成 Word/PDF 草稿 | 已运行 |
 | `paper/course_paper_draft.docx` | 报告草稿 | Word 排版预览，供后续补封面信息和人工校对 | 已生成 |
 | `paper/course_paper_draft.pdf` | 报告草稿 | PDF 预览稿，用于页面渲染检查 | 已生成 |
+| `scripts/build_template_formatted_paper.py` | Python 脚本 | 依据长沙理工大学本科毕业设计（论文）撰写规范样张生成格式化 Word/PDF | 已运行 |
+| `paper/course_paper_formatted.docx` | 报告格式稿 | 已按样张设置页眉页脚、摘要、目录、标题层级、图题和参考文献 | 已生成 |
+| `paper/course_paper_formatted.pdf` | 报告检查稿 | 由格式稿转换得到，用于 PDF 渲染和关键页面检查 | 已生成 |
 | `docs/VIDEO_STORYBOARD.md` | 展示材料 | 3 分钟视频时间轴、旁白稿和素材清单 | 已生成 |
 | `docs/VIDEO_PRODUCTION_GUIDE.md` | 展示材料 | 3 分钟视频录制节奏、真人旁白路线和自动旁白路线 | 已生成 |
 | `scripts/build_video_deck.py` | Python 脚本 | 基于现有图表生成 3 分钟展示 PPT 草稿 | 已运行 |

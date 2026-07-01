@@ -87,10 +87,20 @@
 - 编写 `scripts/build_video_deck.py`，生成本地 PPT 草稿 `outputs/video/china_railway_risk_3min_deck.pptx`。
 - 本机检测到 PowerPoint 和中文系统语音，可继续制作自动旁白版视频；正式提交建议优先采用真人旁白。
 
+## 2026-07-01 学校样张格式化 Word 版本
+
+- 复核 `长沙理工大学本科毕业设计（论文）撰写规范样张.doc` 的页眉、页脚、摘要、目录、正文标题、图题和参考文献格式。
+- 编写 `scripts/build_template_formatted_paper.py`，将 `paper/draft.md` 和 `paper/references_gbt7714.md` 生成为样张风格的 Word/PDF。
+- 生成 `paper/course_paper_formatted.docx` 和 `paper/course_paper_formatted.pdf`，正文页码按“第 X 页 共 20 页”显示。
+- 修正参考文献条目被合并、文末编号被上标化的问题；参考文献现按顺序编码制独立成段。
+- 渲染检查目录页、正文第一页、结论页和参考文献页，页眉校名图、A4 页面、标题层级和正文页脚显示正常。
+- `python -m py_compile scripts/build_template_formatted_paper.py` 通过；`pdfinfo` 显示格式稿为 24 页 A4；公开材料过程词扫描无命中。
+- 更新 `docs/FORMAT_TEMPLATE_NOTES.md`、`paper/README.md`、`scripts/README.md` 和 `SOURCES.md`。
+
 ## 当前完成度判断
 
-- 已基本完成：经营特征与风险机制、风险事件采集与图谱、文本风险指标、Word2Vec 扩词、机器学习预警模型、弹性风险管理模型、完整 Markdown 草稿、Word/PDF 草稿、主要报告图表和视频 PPT 草稿。
-- 尚需完成：最终封面信息与目录校对、3 分钟视频成片、少数企查查汇总样本逐条导出复核。
+- 已基本完成：经营特征与风险机制、风险事件采集与图谱、文本风险指标、Word2Vec 扩词、机器学习预警模型、弹性风险管理模型、完整 Markdown 草稿、学校样张格式化 Word/PDF、主要报告图表和视频 PPT 草稿。
+- 尚需完成：最终封面个人信息、3 分钟视频成片、少数企查查汇总样本逐条导出复核。
 
 ## 验证记录
 
