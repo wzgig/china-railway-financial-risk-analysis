@@ -286,7 +286,6 @@ def draw_trend(scores: pd.DataFrame) -> None:
     ax.axhspan(0, 55, color="#f3d6d6", alpha=0.35, linewidth=0)
     ax.axhspan(55, 65, color="#f5e9bd", alpha=0.35, linewidth=0)
     ax.axhspan(65, 100, color="#d9ead3", alpha=0.35, linewidth=0)
-    ax.set_title("中国中铁 2021-2025 年风险韧性评分趋势", fontsize=15, fontweight="bold")
     ax.set_ylabel("评分（0-100，越高表示缓冲能力越强）")
     ax.set_ylim(0, 100)
     ax.set_xticks(scores["year"])
@@ -319,7 +318,6 @@ def draw_radar(scores: pd.DataFrame) -> None:
     ax.set_yticks([20, 40, 60, 80, 100])
     ax.set_yticklabels(["20", "40", "60", "80", "100"], fontsize=9)
     ax.set_ylim(0, 100)
-    ax.set_title("2025 年风险韧性四维雷达图", fontsize=15, fontweight="bold", pad=22)
     ax.legend(loc="upper right", bbox_to_anchor=(1.22, 1.14), frameon=False)
     fig.tight_layout()
     for path in (LOCAL_RADAR, PAGES_RADAR):

@@ -64,7 +64,6 @@ def build_financial_trends(financial: pd.DataFrame) -> tuple[Path, Path]:
     ax0b = axes[0].twinx()
     ax0b.plot(years, financial["net_profit_parent_100m_rmb"], color="#E45756", marker="o", linewidth=2.4, label="归母净利润")
     ax0b.plot(years, financial["operating_cash_flow_100m_rmb"], color="#54A24B", marker="s", linewidth=2.4, label="经营现金流")
-    axes[0].set_title("规模、利润与现金流")
     axes[0].set_ylabel("营业收入（亿元）")
     ax0b.set_ylabel("利润/现金流（亿元）")
     axes[0].set_xticks(years)
@@ -78,7 +77,6 @@ def build_financial_trends(financial: pd.DataFrame) -> tuple[Path, Path]:
     axes[1].plot(years, financial["accounts_receivable_to_assets_pct"], color="#72B7B2", marker="^", linewidth=2.4, label="应收账款/总资产")
     ax1b = axes[1].twinx()
     ax1b.plot(years, financial["interest_coverage"], color="#E45756", marker="D", linewidth=2.4, label="利息保障倍数")
-    axes[1].set_title("杠杆、资产占用与偿债覆盖")
     axes[1].set_ylabel("比例（%）")
     ax1b.set_ylabel("倍")
     axes[1].set_xticks(years)
@@ -87,7 +85,6 @@ def build_financial_trends(financial: pd.DataFrame) -> tuple[Path, Path]:
     lines3, labels3 = ax1b.get_legend_handles_labels()
     axes[1].legend(lines2 + lines3, labels2 + labels3, loc="upper left", frameon=False)
 
-    fig.suptitle("中国中铁 2021-2025 年财务风险趋势", fontsize=15, fontweight="bold")
     return save_figure(fig, "financial_trends.png")
 
 
@@ -98,7 +95,6 @@ def build_text_heatmap(text_index: pd.DataFrame) -> tuple[Path, Path]:
     image = ax.imshow(pivot.values, cmap="YlOrRd", vmin=60, vmax=100, aspect="auto")
     ax.set_xticks(range(len(pivot.columns)), labels=[str(col) for col in pivot.columns])
     ax.set_yticks(range(len(pivot.index)), labels=pivot.index)
-    ax.set_title("年报文本风险综合得分热力图", fontsize=14, fontweight="bold")
     for row_idx in range(pivot.shape[0]):
         for col_idx in range(pivot.shape[1]):
             value = pivot.iloc[row_idx, col_idx]
@@ -116,7 +112,6 @@ def build_top_terms_chart(text_terms: pd.DataFrame) -> tuple[Path, Path]:
 
     fig, ax = plt.subplots(figsize=(9, 6))
     ax.barh(labels, subset["jieba_weight"], color=colors, alpha=0.82)
-    ax.set_title("2025 年高权重风险种子词", fontsize=14, fontweight="bold")
     ax.set_xlabel("jieba TF-IDF 风格权重")
     ax.grid(axis="x", alpha=0.25)
     return save_figure(fig, "top_2025_risk_terms.png")
@@ -182,7 +177,6 @@ def build_risk_event_matrix(events: list[dict[str, str]]) -> tuple[Path, Path]:
     ax.set_yticks([1, 2, 3, 4, 5])
     ax.set_xlabel("发生概率评分")
     ax.set_ylabel("影响程度评分")
-    ax.set_title("官方披露风险事件矩阵", fontsize=14, fontweight="bold")
     ax.grid(alpha=0.2)
     ax.legend(loc="upper left", bbox_to_anchor=(1.02, 1), frameon=False)
     return save_figure(fig, "risk_event_matrix.png")
@@ -192,7 +186,7 @@ def write_catalog() -> Path:
     lines = [
         "# 图表目录",
         "",
-        "复现脚本：`scripts/build_report_figures.py`",
+        "复现脚本：`scripts/build_report_figures.py`、`scripts/analyze_risk_network.py`、`scripts/build_resilience_model.py`",
         "",
         "## 可用于报告的图表",
         "",
@@ -202,6 +196,9 @@ def write_catalog() -> Path:
         "| 文本风险热力图 | `docs/assets/figures/text_risk_heatmap.png` | 支撑文本风险指标和风险类别排序 |",
         "| 2025 高权重风险词 | `docs/assets/figures/top_2025_risk_terms.png` | 支撑文本风险词典和年报风险语境解释 |",
         "| 官方事件风险矩阵 | `docs/assets/figures/risk_event_matrix.png` | 支撑风险发生概率与影响程度二维评估 |",
+        "| 风险图谱中心性分布 | `docs/assets/figures/risk_network_gephi_style.png` | 支撑 Gephi 风险图谱、中心性和风险传导路径解释 |",
+        "| 2025 年风险韧性四维雷达图 | `docs/assets/figures/resilience_radar_2025.png` | 支撑弹性风险管理模型和风险缓冲能力解释 |",
+        "| 风险韧性评分趋势 | `docs/assets/figures/resilience_score_trend.png` | 支撑 2021-2025 年缓冲能力趋势分析 |",
         "",
         "## 预览",
         "",
@@ -213,10 +210,17 @@ def write_catalog() -> Path:
         "",
         "![官方事件风险矩阵](assets/figures/risk_event_matrix.png)",
         "",
+        "![风险图谱中心性分布](assets/figures/risk_network_gephi_style.png)",
+        "",
+        "![2025 年风险韧性四维雷达图](assets/figures/resilience_radar_2025.png)",
+        "",
+        "![风险韧性评分趋势](assets/figures/resilience_score_trend.png)",
+        "",
         "## 使用边界",
         "",
         "- 图表基于公开年报、评级报告和本地脚本整理结果生成。",
-        "- 当前风险矩阵使用官方披露种子事件，后续加入司法、执行和企业风险样本后应重新生成。",
+        "- 风险矩阵使用官方披露种子事件；风险图谱中心性分布使用官方披露、司法、执行和企查查扩展样本的合并事件表。",
+        "- 弹性风险管理图表是样本期内相对评分，不构成信用评级或投资建议。",
         "- `outputs/figures/` 保存本地作图副本；`docs/assets/figures/` 用于 GitHub Pages 展示。",
     ]
     CATALOG_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")

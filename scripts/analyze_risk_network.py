@@ -263,7 +263,6 @@ def draw_network(graph: nx.DiGraph, rows: list[dict[str, str]]) -> None:
         if any(undirected.nodes[node].get("node_type") == node_type for node in undirected.nodes)
     ]
     ax.legend(handles=legend_handles, loc="lower left", frameon=False, ncol=2)
-    ax.set_title("中国中铁风险图谱中心性导图", fontsize=16, fontweight="bold")
     ax.text(
         0.01,
         0.12,

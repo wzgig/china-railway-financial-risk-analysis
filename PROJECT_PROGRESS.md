@@ -105,6 +105,14 @@
 - 渲染检查摘要页、目录页、正文首页、结论页和参考文献页，格式稿为 23 页 A4，正文页脚显示为“第 X 页 共 19 页”。
 - 将图谱段落中偏过程化的 GEXF/导图生成表述改为网络测度解释，突出加权度、中介中心性、PageRank 和 Louvain 社群划分的分析含义。
 
+## 2026-07-01 报告图件版式优化
+
+- 调整 `scripts/build_report_figures.py`、`scripts/analyze_risk_network.py` 和 `scripts/build_resilience_model.py`，去除图件顶部的内部题名，保留坐标轴、图例、色标和必要的节点说明。
+- 重新生成 `docs/assets/figures/` 下的 7 张报告图件，并同步刷新 `docs/FIGURES_CATALOG.md`。
+- 重新生成 `paper/course_paper_draft.docx`、`paper/course_paper_draft.pdf`、`paper/course_paper_formatted.docx` 和 `paper/course_paper_formatted.pdf`，确保 Word/PDF 嵌入的图件与最新图像一致。
+- 正式 PDF 为 23 页 A4；已渲染第 11-18 页并检查图 1 至图 7，图内顶部无独立题名，图题均位于图下方图注位置。
+- `python -m py_compile` 和 `git diff --check` 已通过；当前仓库未包含 `scripts/course_paper_preflight.py`，课程预检脚本无法执行。
+
 ## 当前完成度判断
 
 - 已基本完成：经营特征与风险机制、风险事件采集与图谱、文本风险指标、Word2Vec 扩词、机器学习预警模型、弹性风险管理模型、完整 Markdown 草稿、学校样张格式化 Word/PDF、主要报告图表和视频 PPT 草稿。
