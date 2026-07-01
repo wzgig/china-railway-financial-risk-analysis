@@ -97,6 +97,13 @@
 - `python -m py_compile scripts/build_template_formatted_paper.py` 通过；`pdfinfo` 显示格式稿为 24 页 A4；公开材料过程词扫描无命中。
 - 更新 `docs/FORMAT_TEMPLATE_NOTES.md`、`paper/README.md`、`scripts/README.md` 和 `SOURCES.md`。
 
+## 2026-07-01 报告终稿化润色
+
+- 对 `paper/draft.md` 进行终稿化改写，重点压缩过程性说明，强化研究问题、指标逻辑、图谱解释、模型结果和管理建议之间的衔接。
+- 删除正文中的“课程研究”“候选/待复核”“candidate/verify”“可能”等不适合终稿呈现的表达，改为证据权重、研究边界和管理含义的正式表述。
+- 同步生成 `paper/course_paper_formatted.docx`、`paper/course_paper_formatted.pdf`、`paper/course_paper_draft.docx` 和 `paper/course_paper_draft.pdf`。
+- 渲染检查摘要页、目录页、正文首页、结论页和参考文献页，格式稿为 23 页 A4，正文页脚显示为“第 X 页 共 19 页”。
+
 ## 当前完成度判断
 
 - 已基本完成：经营特征与风险机制、风险事件采集与图谱、文本风险指标、Word2Vec 扩词、机器学习预警模型、弹性风险管理模型、完整 Markdown 草稿、学校样张格式化 Word/PDF、主要报告图表和视频 PPT 草稿。
