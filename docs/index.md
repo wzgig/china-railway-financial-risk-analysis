@@ -56,6 +56,7 @@ description: 风险图谱、文本指标与机器学习预警的课程项目材�
 - [数据字典](DATA_DICTIONARY.md)
 - [视频分镜脚本](VIDEO_STORYBOARD.md)
 - [视频制作说明](VIDEO_PRODUCTION_GUIDE.md)
+- [3 分钟录屏操作指南](VIDEO_RECORDING_GUIDE_3MIN_WORKFLOW.md)
 
 完整仓库地址：<https://github.com/wzgig/china-railway-financial-risk-analysis>
 
