@@ -78,10 +78,19 @@
 - 扩充 `docs/VIDEO_STORYBOARD.md`，形成 3 分钟展示视频的时间轴、旁白稿和素材清单。
 - 更新 `scripts/README.md`、`paper/README.md` 和 `COURSE_REQUIREMENTS_AUDIT.md`，使公开说明与当前成果一致。
 
+## 2026-07-01 外部样本复核与视频制作准备
+
+- 复核司法、执行和企查查扩展样本，更新 `scripts/build_external_risk_events.py` 和 `docs/EXTERNAL_RISK_EVENTS_SAMPLE.md`。
+- 外部扩展样本仍为 11 条；证据状态调整为 `core` 2 条、`candidate` 7 条、`verify` 2 条。
+- 每日经济新闻、维基文库转载裁判文书、新浪财经/经济参考网转载信息和财中社企查查转载信息均已记录复核边界；对需要登录、验证码或权限限制的平台不绕过限制。
+- 新增 `docs/VIDEO_PRODUCTION_GUIDE.md`，说明 3 分钟视频的录制节奏、真人旁白路线和自动旁白路线。
+- 编写 `scripts/build_video_deck.py`，生成本地 PPT 草稿 `outputs/video/china_railway_risk_3min_deck.pptx`。
+- 本机检测到 PowerPoint 和中文系统语音，可继续制作自动旁白版视频；正式提交建议优先采用真人旁白。
+
 ## 当前完成度判断
 
-- 已基本完成：经营特征与风险机制、风险事件采集与图谱、文本风险指标、Word2Vec 扩词、机器学习预警模型、弹性风险管理模型、完整 Markdown 草稿、Word/PDF 草稿和主要报告图表。
-- 尚需完成：最终封面信息与目录校对、3 分钟视频成片、执行和企查查候选样本复核。
+- 已基本完成：经营特征与风险机制、风险事件采集与图谱、文本风险指标、Word2Vec 扩词、机器学习预警模型、弹性风险管理模型、完整 Markdown 草稿、Word/PDF 草稿、主要报告图表和视频 PPT 草稿。
+- 尚需完成：最终封面信息与目录校对、3 分钟视频成片、少数企查查汇总样本逐条导出复核。
 
 ## 验证记录
 

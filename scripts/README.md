@@ -32,6 +32,7 @@
 | `train_financial_warning_model.py` | 训练 Logistic Regression 和 Random Forest 基线模型 | `outputs/models/`、`outputs/tables/`、`docs/FINANCIAL_WARNING_MODEL.md` |
 | `build_resilience_model.py` | 构建弹性风险管理四维评分和图表 | `data/processed/resilience_scores.csv`、`docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md` |
 | `build_course_paper_docx.py` | 从 Markdown 草稿生成 DOCX/PDF 草稿 | `paper/course_paper_draft.docx`、`paper/course_paper_draft.pdf` |
+| `build_video_deck.py` | 生成 3 分钟展示视频的 PPT 草稿 | `outputs/video/china_railway_risk_3min_deck.pptx` |
 
 ## 运行约束
 

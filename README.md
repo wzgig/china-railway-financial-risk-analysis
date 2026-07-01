@@ -73,3 +73,5 @@ GitHub Pages 项目页：<https://wzgig.github.io/china-railway-financial-risk-a
 - 弹性风险管理模型：[docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md](docs/RESILIENCE_RISK_MANAGEMENT_MODEL.md)
 - 图表目录：[docs/FIGURES_CATALOG.md](docs/FIGURES_CATALOG.md)
 - 格式模板提取记录：[docs/FORMAT_TEMPLATE_NOTES.md](docs/FORMAT_TEMPLATE_NOTES.md)
+- 视频分镜脚本：[docs/VIDEO_STORYBOARD.md](docs/VIDEO_STORYBOARD.md)
+- 视频制作说明：[docs/VIDEO_PRODUCTION_GUIDE.md](docs/VIDEO_PRODUCTION_GUIDE.md)

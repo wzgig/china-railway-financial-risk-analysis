@@ -20,7 +20,21 @@ OFFICIAL_EVENTS_CSV = Path("data/interim/risk_events_official_seed.csv")
 EXTERNAL_EVENTS_CSV = Path("data/interim/risk_events_external_sample.csv")
 COMBINED_EVENTS_CSV = Path("data/processed/risk_events_combined.csv")
 DOC_OUTPUT = Path("docs/EXTERNAL_RISK_EVENTS_SAMPLE.md")
-ACCESS_DATE = "2026-06-29"
+ACCESS_DATE = "2026-07-01"
+
+REVIEW_NOTES = {
+    "EX2023-WENSHU-SH-230": "法院公开 PDF 可直接复核案号、当事人和金额，维持 core。",
+    "EX2023-WENSHU-SH-496": "法院公开 PDF 可直接复核案号、当事人和金额，维持 core。",
+    "EX2024-WENSHU-LN-1533": "维基文库页面标明文本来自 caseopen 存档，并指向需登录检视的裁判文书网原始页面；金额和案号可用于线索，仍保留 candidate。",
+    "EX2023-EXEC-GZ-417": "每日经济新闻报道披露执行案号、执行法院、欠款构成和金额，并称图片来自中国执行信息公开网；因未直接取得官方平台记录，维持 candidate。",
+    "EX2023-EXEC-TUNNEL-3-LIMIT": "每日经济新闻报道披露限制消费令日期、申请执行主体、法院和两笔租赁欠款金额；因未直接取得执行平台记录，维持 candidate。",
+    "EX2023-EXEC-10J-2-LIMIT": "每日经济新闻报道披露限制消费令日期、法院、申请执行主体和纠纷类型，但未给出可结构化执行金额；由 verify 调整为 candidate。",
+    "EX2023-EXEC-6J-ROADBRIDGE": "新浪财经/中国质量新闻网转引执行信息并列出至少一个案号和合计执行标的；其余案号仍需补齐，维持 candidate。",
+    "EX2025-EXEC-3J-BRIDGE": "经济参考网及新浪财经转载信息披露两条执行金额、执行法院和年度累计口径；因案件细节未披露，维持 candidate。",
+    "EX2026-QCC-TUNNEL-PENALTY": "财中社援引企查查行政处罚汇总，但不是逐条处罚明细，维持 verify。",
+    "EX2026-QCC-TUNNEL-EXEC": "财中社披露 29 条、约 1.3 亿元，其他转载口径存在 28 条、约 1.26 亿元差异；保留为 verify。",
+    "EX2026-QCC-TUNNEL-23EXEC": "财中社披露 23 起新增执行案件、总标的约 9458 万元，并列出部分案号和法院；由 verify 调整为 candidate，但建模前仍需与总额汇总去重。",
+}
 
 
 def load_schema() -> dict[str, object]:
@@ -204,8 +218,8 @@ def build_external_events() -> list[dict[str, str]]:
             summary="报道披露供应商申请执行买卖合同纠纷后，法院对中铁十局二公司及法定代表人出具限制消费令，体现材料款拖欠和执行压力。",
             severity_score="2",
             probability_score="4",
-            evidence_status="verify",
-            notes="报道中金额为访谈估算区间，未录入结构化金额；需法院或执行平台复核。",
+            evidence_status="candidate",
+            notes="报道披露法院、日期、申请执行主体和纠纷类型；金额为访谈估算区间，未录入结构化金额。",
         ),
         event(
             event_id="EX2023-EXEC-6J-ROADBRIDGE",
@@ -259,7 +273,7 @@ def build_external_events() -> list[dict[str, str]]:
             event_id="EX2026-QCC-TUNNEL-PENALTY",
             source_type="qcc",
             source_name="财中社转引企查查",
-            source_url="https://m.caizhongshe.cn/article-7332928644422008550.html",
+            source_url="https://m.caizhongshe.cn/news-7332928644422008550.html",
             search_keyword="中铁隧道局 企查查 行政处罚 460万",
             company_name="中铁隧道局集团有限公司",
             company_role="penalized_entity",
@@ -283,7 +297,7 @@ def build_external_events() -> list[dict[str, str]]:
             event_id="EX2026-QCC-TUNNEL-EXEC",
             source_type="qcc",
             source_name="财中社转引企查查",
-            source_url="https://m.caizhongshe.cn/article-7332928644422008550.html",
+            source_url="https://m.caizhongshe.cn/news-7332928644422008550.html",
             search_keyword="中铁隧道局 企查查 被执行人 1.3亿元",
             company_name="中铁隧道局集团有限公司",
             company_role="judgment_debtor",
@@ -307,7 +321,7 @@ def build_external_events() -> list[dict[str, str]]:
             event_id="EX2026-QCC-TUNNEL-23EXEC",
             source_type="qcc",
             source_name="财中社转引企查查",
-            source_url="https://m.caizhongshe.cn/article-7332928644422008550.html",
+            source_url="https://m.caizhongshe.cn/news-7332928644422008550.html",
             search_keyword="中铁隧道局 40天 23起 执行 9458万元",
             company_name="中铁隧道局集团有限公司",
             company_role="judgment_debtor",
@@ -324,8 +338,8 @@ def build_external_events() -> list[dict[str, str]]:
             summary="报道称2026年1月13日至2月10日不到40天内，中铁隧道局累计新增23起执行案件，总执行标的约9458万元。",
             severity_score="4",
             probability_score="4",
-            evidence_status="verify",
-            notes="与企查查汇总被执行金额存在重叠风险；建模前需做事件级去重。",
+            evidence_status="candidate",
+            notes="报道列出部分案号、执行法院和金额；与企查查汇总被执行金额存在重叠风险，建模前需做事件级去重。",
         ),
     ]
 
@@ -439,6 +453,20 @@ def write_markdown(external: list[dict[str, str]], combined: list[dict[str, str]
                 summary=row["summary"],
             )
         )
+
+    lines.extend(
+        [
+            "",
+            "## 2026-07-01 复核记录",
+            "",
+            "本次复核以公开网页、法院公开 PDF、新闻调查报道和企查查转载报道为基础；对执行信息公开网和企查查不绕过登录、验证码或权限限制。",
+            "",
+            "| 事件ID | 复核后状态 | 复核结论 |",
+            "|---|---|---|",
+        ]
+    )
+    for row in external:
+        lines.append(f"| {row['event_id']} | {row['evidence_status']} | {REVIEW_NOTES[row['event_id']]} |")
 
     lines.extend(
         [

@@ -104,7 +104,14 @@
 | X4 | 每日经济新闻调查报道，转引执行信息和限制消费信息 | https://www.nbd.com.cn/articles/2024-04-10/3321035.html | 中铁广州工程局第三公司、中铁隧道三处、中铁十局二公司执行/限制消费样本 | candidate/verify |
 | X5 | 中国质量新闻网/新浪财经转引中国执行信息公开网 | https://finance.sina.cn/2023-01-31/detail-imyeancp0172215.d.html?vt=4 | 中铁六局路桥新增被执行人样本 | candidate |
 | X6 | 经济参考网/新浪财经转引天眼查 | https://finance.sina.com.cn/stock/relnews/cn/2025-05-09/doc-inevxzxu7563170.shtml | 中铁三局桥隧新增被执行人样本 | candidate |
-| X7 | 财中社转引企查查 | https://m.caizhongshe.cn/article-7332928644422008550.html | 中铁隧道局行政处罚、被执行人和短期新增执行案件汇总样本 | verify |
+| X7 | 财中社转引企查查 | https://m.caizhongshe.cn/news-7332928644422008550.html | 中铁隧道局行政处罚、被执行人和短期新增执行案件汇总样本 | verify/candidate |
+
+### 2026-07-01 外部样本复核说明
+
+- 每日经济新闻报道中的中铁广州工程局第三公司、中铁隧道三处和中铁十局二公司执行/限制消费线索，因披露了法院、日期、主体、案由或金额，复核后统一作为 `candidate`；仍不能替代中国执行信息公开网逐条导出记录。
+- 中铁六局路桥、中铁三局桥隧样本仍为 `candidate`，原因是公开报道给出金额和部分法院/案号线索，但案件明细未完全展开。
+- 中铁隧道局企查查汇总中，“23 起新增执行、约 9458 万元”因列出部分案号和法院，复核后作为 `candidate`；“行政处罚汇总”和“被执行人总量/总金额汇总”仍为 `verify`，进入最终结论前需要逐条导出和去重。
+- 复核不绕过裁判文书网、执行信息公开网和企查查的登录、验证码或权限限制。
 
 ## 新增同业面板与机器学习来源
 
@@ -152,7 +159,11 @@
 | `paper/course_paper_draft.docx` | 报告草稿 | Word 排版预览，供后续补封面信息和人工校对 | 已生成 |
 | `paper/course_paper_draft.pdf` | 报告草稿 | PDF 预览稿，用于页面渲染检查 | 已生成 |
 | `docs/VIDEO_STORYBOARD.md` | 展示材料 | 3 分钟视频时间轴、旁白稿和素材清单 | 已生成 |
+| `docs/VIDEO_PRODUCTION_GUIDE.md` | 展示材料 | 3 分钟视频录制节奏、真人旁白路线和自动旁白路线 | 已生成 |
+| `scripts/build_video_deck.py` | Python 脚本 | 基于现有图表生成 3 分钟展示 PPT 草稿 | 已运行 |
+| `outputs/video/china_railway_risk_3min_deck.pptx` | 本地展示稿 | 3 分钟视频录制用 PPT 草稿 | 本地生成，不纳入公开仓库 |
 | Pandoc、LibreOffice、Poppler | 本地工具 | Markdown 转 Word、Word 转 PDF 和 PDF 页面渲染检查 | 本地使用 |
+| PowerPoint、Microsoft Huihui Desktop | 本地工具 | 视频 PPT 录制、导出和中文自动旁白备选 | 本地可用 |
 
 ## 来源使用原则
 
