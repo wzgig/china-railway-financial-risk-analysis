@@ -1,0 +1,57 @@
+{
+  "nodes": {
+    "required_columns": [
+      "node_id",
+      "node_name",
+      "node_type",
+      "stage",
+      "value_role",
+      "cost_role",
+      "evidence_level",
+      "source_id",
+      "note"
+    ],
+    "node_type_values": [
+      "company",
+      "platform",
+      "resource",
+      "capability",
+      "market",
+      "customer",
+      "policy",
+      "partner"
+    ],
+    "evidence_level_values": [
+      "official",
+      "company",
+      "industry",
+      "media",
+      "simulated"
+    ]
+  },
+  "edges": {
+    "required_columns": [
+      "source",
+      "target",
+      "edge_type",
+      "weight",
+      "stage",
+      "scenario",
+      "cost_mechanism",
+      "value_outcome",
+      "evidence_source",
+      "evidence_level",
+      "note"
+    ],
+    "edge_type_values": [
+      "energy_supply",
+      "data_flow",
+      "dispatch",
+      "market_trade",
+      "technology_collaboration",
+      "policy_constraint",
+      "value_share"
+    ],
+    "weight_range": [1, 5]
+  }
+}

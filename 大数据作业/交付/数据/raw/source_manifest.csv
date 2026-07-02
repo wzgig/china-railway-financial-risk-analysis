@@ -1,0 +1,8 @@
+﻿source_id,source_name,source_type,publisher,publish_date,access_date,url,used_for,evidence_level,note
+S001,协鑫能科投资者关系页,company_page,协鑫能源科技股份有限公司,,2026-07-02,https://www.gcl-et.com/investor.html,公司披露入口和公告索引,company,后续从官网进入定期报告和业务页面
+S002,协鑫能科2024年年度报告摘要,annual_report_summary,协鑫能源科技股份有限公司,2025-04-29,2026-07-02,https://static.cninfo.com.cn/finalpage/2025-04-29/1223382334.PDF,能源资产/能源服务/虚拟电厂/交易服务节点与指标,official,巨潮资讯PDF
+S003,协鑫能科2025年半年度报告全文,semiannual_report,协鑫能源科技股份有限公司,2025-08-29,2026-07-02,https://static.cninfo.com.cn/finalpage/2025-08-29/1224608153.PDF,业务进展和风险提示补充,official,巨潮资讯PDF
+S004,协鑫能科投资者关系活动记录表,investor_record,协鑫能源科技股份有限公司,2025-09-02,2026-07-02,https://static.cninfo.com.cn/finalpage/2025-09-02/1224635444.PDF,虚拟电厂/算电协同/模型能力节点,official,巨潮资讯PDF
+S005,加快构建新型电力系统行动方案（2024-2027年）,policy,国家发展改革委等,2024-08-06,2026-07-02,https://www.ndrc.gov.cn/xwdt/tzgg/202408/P020240806534738672970.pdf,2024-2027政策阶段和算力电力协同背景,official,国家发改委PDF
+S006,国家能源局电力司就行动方案答记者问,policy_interpretation,国家能源局,2024-08-06,2026-07-02,https://www.nea.gov.cn/2024-08/06/c_1212386607.htm,政策解读和应用场景说明,official,官方解读页面
+S007,关于支持算力中心与绿电资源协同发展的建议答复,policy_reply,国家发展改革委,2025-11-20,2026-07-02,https://www.ndrc.gov.cn/xxgk/jianyitianfuwen/qgrddbjyfwgk/202511/t20251120_1401802.html,算电协同和绿色算力政策补充,official,后续视报告需要决定是否引用

@@ -1,0 +1,5 @@
+﻿community,node_count,dominant_node_types,top_nodes,avg_pagerank,avg_weighted_degree
+0,11,resource:4；customer:3；market:2,AI赋能虚拟电厂平台；工商业用户侧负荷；工业负荷模型,0.045247,19.4545
+1,11,market:6；platform:1；capability:1,调节收益分成机制；辅助服务市场；电力现货市场,0.014903,15.2727
+2,10,capability:4；resource:2；policy:2,能源调度模型；协鑫能科；分布式能源负荷预测模型,0.016074,13.7
+3,6,resource:2；platform:1；customer:1,零碳园区能源平台；AIDC/智算客户；数据中心/AIDC负荷,0.029602,18.8333

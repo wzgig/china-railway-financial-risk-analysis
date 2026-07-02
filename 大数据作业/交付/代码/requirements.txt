@@ -1,0 +1,12 @@
+pandas>=2.2
+numpy>=1.26
+networkx>=3.2
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.22
+pyvis>=0.3.2
+python-louvain>=0.16
+openpyxl>=3.1
+requests>=2.32
+beautifulsoup4>=4.12
+tqdm>=4.66
