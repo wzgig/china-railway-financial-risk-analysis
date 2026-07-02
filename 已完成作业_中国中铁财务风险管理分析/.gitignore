@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Data and generated outputs
+data/raw/**/*.pdf
+data/raw/**/*.xlsx
+data/raw/**/*.xls
+data/raw/**/*.csv
+data/raw/**/*.json
+data/interim/*
+data/processed/*
+outputs/gephi/*
+outputs/figures/*
+outputs/models/*
+outputs/tables/*
+outputs/video/*
+outputs/docx/*
+logs/*
+
+# Keep directory docs via README files
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!outputs/gephi/.gitkeep
+!outputs/figures/.gitkeep
+!outputs/models/.gitkeep
+!outputs/tables/.gitkeep
+!outputs/video/.gitkeep
+!outputs/docx/.gitkeep
+!logs/.gitkeep
+
+# Office temporary files
+~$*
+*.tmp
+
+# Local assignment originals kept off the public repository
+要求.jpg
+李凤茵老师：中国中铁财务风险管理分析要求.md
+长沙理工大学本科毕业设计（论文）撰写规范样张.doc

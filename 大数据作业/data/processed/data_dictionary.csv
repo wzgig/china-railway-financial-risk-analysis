@@ -1,0 +1,21 @@
+﻿table_name,field_name,data_type,definition,allowed_values,is_in_dataset
+nodes,node_id,string,节点唯一编号,N001-N999,True
+nodes,node_name,string,节点中文名称,自由文本,True
+nodes,node_type,category,节点类型,company/platform/resource/capability/market/customer/policy/partner,True
+nodes,stage,category,节点首次或主要对应阶段,all/2024/2025/2026/2027,True
+nodes,value_role,category,价值创造角色,资源、调度、市场连接、客户需求、价值分配等角色,True
+nodes,cost_role,category,成本管理角色,energy_cost/dispatch_cost/transaction_cost/coordination_cost 等,True
+nodes,evidence_level,category,节点证据等级,official/company/industry/media/simulated,True
+nodes,source_id,string,节点主要来源编号,对应 source_manifest.csv 的 source_id,True
+nodes,note,string,节点说明,说明公开资料依据或模拟边界,True
+edges,source,string,起点节点编号,必须存在于 nodes.node_id,True
+edges,target,string,终点节点编号,必须存在于 nodes.node_id,True
+edges,edge_type,category,关系类型,energy_supply/data_flow/dispatch/market_trade/technology_collaboration/policy_constraint/value_share,True
+edges,weight,integer,相对重要性权重,1-5，非真实交易金额,True
+edges,stage,category,关系对应阶段,all/2024/2025/2026/2027,True
+edges,scenario,category,业务场景,虚拟电厂/绿电交易/AIDC/零碳园区等,True
+edges,cost_mechanism,category,成本管理机制,能源成本/调度成本/交易成本/协调成本/绿色合规成本/收益分配等,True
+edges,value_outcome,string,价值结果,稳定供能、调节收益、绿色溢价、客户粘性等,True
+edges,evidence_source,string,边关系证据来源编号,对应 source_manifest.csv 的 source_id,True
+edges,evidence_level,category,边关系证据等级,official/company/industry/media/simulated,True
+edges,note,string,边关系说明,说明公开资料依据、行业逻辑或模拟边界,True

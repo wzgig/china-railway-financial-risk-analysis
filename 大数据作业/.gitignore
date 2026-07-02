@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+
+# Large or temporary source files can be kept locally and recorded in 数据来源记录.md.
+data/raw/*.pdf
+data/raw/*.xlsx
+data/raw/*.zip
+outputs/video/*.mp4
+outputs/video/*.mov
+logs/*.log
+

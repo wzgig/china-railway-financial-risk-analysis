@@ -1,0 +1,9 @@
+edge_type,中文说明,管理含义
+energy_supply,能源供给关系,解释低碳稳定供能与能源成本控制
+data_flow,数据流动关系,解释气象/设备/电价/政策/负荷数据如何进入算法
+dispatch,调度控制关系,解释虚拟电厂平台如何协调资源
+market_trade,市场交易关系,解释辅助服务/需求响应/绿电交易收益
+technology_collaboration,技术协同关系,解释算法模型和算力生态合作
+policy_constraint,政策约束关系,解释政策目标和市场规则影响
+value_share,价值分配关系,解释节能收益/调节收益/绿色溢价共享
+

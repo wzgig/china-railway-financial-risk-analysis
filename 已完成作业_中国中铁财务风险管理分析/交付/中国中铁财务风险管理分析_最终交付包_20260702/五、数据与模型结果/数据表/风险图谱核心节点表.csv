@@ -1,0 +1,16 @@
+﻿node_id,label,node_type,community,weighted_degree,in_strength,out_strength,degree_centrality,betweenness_centrality,closeness_centrality,pagerank
+company_9a3040dd6ec0,中国中铁股份有限公司,company,4,60.0000,0.0000,60.0000,0.223684,0.317592,0.355140,0.008699
+risk_type_ff0c9bc7b1c2,compliance,risk_type,2,29.0000,29.0000,0.0000,0.118421,0.285370,0.361905,0.051004
+risk_type_ed6a9edb2628,liquidity,risk_type,1,24.0000,24.0000,0.0000,0.078947,0.133582,0.273381,0.051289
+event_c47f0a9b19dd,OF2024-CONTRACT-ASSET asset_quality_signal,event,4,11.0000,5.0000,6.0000,0.052632,0.026152,0.278388,0.009316
+risk_type_40b7822a570d,solvency,risk_type,5,11.0000,11.0000,0.0000,0.039474,0.003454,0.237500,0.023679
+event_205595cdeea7,OF2025-CONTRACT-ASSET asset_quality_signal,event,4,11.0000,5.0000,6.0000,0.052632,0.023661,0.286792,0.009316
+event_0c6c5aa23950,EX2026-QCC-TUNNEL-23EXEC execution_case,event,1,11.0000,4.0000,7.0000,0.065789,0.041255,0.244373,0.011657
+event_8d8877ce56b3,EX2026-QCC-TUNNEL-EXEC execution_case,event,1,11.0000,4.0000,7.0000,0.065789,0.041255,0.244373,0.011657
+event_ecc9b74a2852,OF2021-GUARANTEE guarantee,event,4,10.0000,5.0000,5.0000,0.065789,0.020430,0.270463,0.009316
+risk_type_7526c16db72f,organizational_propagation,risk_type,4,10.0000,10.0000,0.0000,0.065789,0.017360,0.292308,0.024409
+event_26a1ecc1aded,OF2022-GUARANTEE guarantee,event,4,10.0000,5.0000,5.0000,0.065789,0.020430,0.270463,0.009316
+event_fbfe31b0371e,EX2023-EXEC-6J-ROADBRIDGE execution_case,event,1,10.0000,3.0000,7.0000,0.065789,0.092094,0.284644,0.016093
+event_8b2452c17a14,EX2023-EXEC-GZ-417 dishonest_judgment_debtor,event,2,10.0000,3.0000,7.0000,0.065789,0.086386,0.307692,0.016093
+event_3f4895d96d03,OF2023-GUARANTEE guarantee,event,4,10.0000,5.0000,5.0000,0.065789,0.101212,0.334802,0.009316
+event_5cb8d8cf500a,OF2024-PROFIT financial_pressure,event,4,10.0000,4.0000,6.0000,0.052632,0.026152,0.278388,0.009192

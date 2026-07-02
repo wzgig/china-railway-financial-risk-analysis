@@ -1,0 +1,78 @@
+﻿node_id,label,node_type,year,event_type,risk_type,amount_rmb
+company_9a3040dd6ec0,中国中铁股份有限公司,company,,,,
+event_ecc9b74a2852,OF2021-GUARANTEE guarantee,event,2021,guarantee,organizational_propagation,153389862000
+risk_type_7526c16db72f,organizational_propagation,risk_type,,,,
+year_7104bc3a3df9,2021,year,,,,
+source_d43b27f6958a,中国中铁2021年年度报告,source,,,,
+related_party_9a2b26d69278,集团内子公司、房地产项目购房业主等,related_party,,,,
+event_5a19d5b814ce,OF2021-LITIGATION litigation_contingency,event,2021,litigation_contingency,compliance,5255606000
+risk_type_ff0c9bc7b1c2,compliance,risk_type,,,,
+related_party_542e62056c04,客户、分包商、供应商等,related_party,,,,
+event_26a1ecc1aded,OF2022-GUARANTEE guarantee,event,2022,guarantee,organizational_propagation,154518154000
+year_63ff7434bd7c,2022,year,,,,
+source_16fd4bf840e2,中国中铁2022年年度报告,source,,,,
+event_1ab59aa13d18,OF2022-LITIGATION litigation_contingency,event,2022,litigation_contingency,compliance,5115724000
+company_086b1b86cf7d,中铁十局集团第二工程有限公司,company,,,,
+event_745090759f1f,EX2023-EXEC-10J-2-LIMIT restricted_consumption,event,2023,restricted_consumption,liquidity,
+risk_type_ed6a9edb2628,liquidity,risk_type,,,,
+year_3af67127ffe8,2023,year,,,,
+source_3c59d69e8115,每日经济新闻调查报道,source,,,,
+related_party_94a7abcc77d7,新野县安鑫商贸有限公司；郑州市金水区人民法院,related_party,,,,
+company_7615305be336,中铁六局集团路桥建设有限公司,company,,,,
+event_fbfe31b0371e,EX2023-EXEC-6J-ROADBRIDGE execution_case,event,2023,execution_case,liquidity,6463056
+source_090f4f535381,中国质量新闻网/新浪财经转引中国执行信息公开网,source,,,,
+related_party_8315c2bb5b76,玉溪市红塔区人民法院等,related_party,,,,
+company_334ef122f170,中铁广州工程局集团第三工程有限公司,company,,,,
+event_8b2452c17a14,EX2023-EXEC-GZ-417 dishonest_judgment_debtor,event,2023,dishonest_judgment_debtor,compliance,9529917.62
+source_5d3eb3bfff6c,每日经济新闻转引中国执行信息公开网,source,,,,
+related_party_2b6ee0713c37,陕西康力建工有限公司；天等县人民法院,related_party,,,,
+company_d637e6129c10,中铁隧道集团三处有限公司,company,,,,
+event_71f327618b65,EX2023-EXEC-TUNNEL-3-LIMIT restricted_consumption,event,2023,restricted_consumption,liquidity,512000
+related_party_3bf944c5de0f,深圳市柳空压缩机有限公司等五家公司；深圳市南山区人民法院,related_party,,,,
+company_da2659b5b6a6,中铁上海工程局集团有限公司,company,,,,
+event_9ed9eadb3f99,EX2023-WENSHU-SH-230 civil_litigation,event,2023,civil_litigation,compliance,938036.20
+source_8908b2179054,上海铁路运输法院民事判决书（2023）沪7101民初230号,source,,,,
+related_party_9b8069f014c6,河北通力金属制品有限公司,related_party,,,,
+event_e368d51d2d60,EX2023-WENSHU-SH-496 civil_litigation,event,2023,civil_litigation,compliance,692215.45
+source_1169c7f6d0d9,上海铁路运输法院民事判决书（2023）沪7101民初496号,source,,,,
+related_party_663dc7dcee66,江苏诚鑫达供应链管理有限公司,related_party,,,,
+event_3f4895d96d03,OF2023-GUARANTEE guarantee,event,2023,guarantee,organizational_propagation,133374778000
+source_cac3c121eff2,中国中铁2023年年度报告,source,,,,
+event_fd9be5b38eca,OF2023-LITIGATION litigation_contingency,event,2023,litigation_contingency,compliance,4327001000
+company_6cf95965d0e2,中铁九局集团有限公司,company,,,,
+event_f7093df3364d,EX2024-WENSHU-LN-1533 civil_litigation,event,2024,civil_litigation,project,2426785.19
+risk_type_bcdbd26b39eb,project,risk_type,,,,
+year_bc19ba460f1f,2024,year,,,,
+source_d4928b8092a6,辽宁省朝阳市中级人民法院二审判决书（2024）辽13民终1533号,source,,,,
+related_party_835f65054b59,辽宁华展市政工程有限公司,related_party,,,,
+event_c47f0a9b19dd,OF2024-CONTRACT-ASSET asset_quality_signal,event,2024,asset_quality_signal,operation,333120000000
+risk_type_02d87bf49ed7,operation,risk_type,,,,
+source_c9ee6d60b2e8,中国中铁2024年年度报告,source,,,,
+event_2551562add1b,OF2024-GUARANTEE guarantee,event,2024,guarantee,organizational_propagation,83611594000
+event_ee7a720eb916,OF2024-LITIGATION litigation_contingency,event,2024,litigation_contingency,compliance,2575979000
+event_5cb8d8cf500a,OF2024-PROFIT financial_pressure,event,2024,financial_pressure,profitability,27887000000
+risk_type_828441d4753e,profitability,risk_type,,,,
+event_7babe8660715,OF2024-SOLVENCY financial_pressure,event,2024,financial_pressure,solvency,
+risk_type_40b7822a570d,solvency,risk_type,,,,
+company_b88f3b7c6259,中铁三局集团桥隧工程有限公司,company,,,,
+event_5e0273dd44be,EX2025-EXEC-3J-BRIDGE execution_case,event,2025,execution_case,liquidity,13600000
+year_af9e781c4cbd,2025,year,,,,
+source_ecd8b8ba5e04,经济参考网/新浪财经转引天眼查,source,,,,
+related_party_533edef6e2da,四川省成都市中级人民法院,related_party,,,,
+event_205595cdeea7,OF2025-CONTRACT-ASSET asset_quality_signal,event,2025,asset_quality_signal,operation,366845000000
+source_9b9d389b3a64,中国中铁2025年年度报告,source,,,,
+event_863b3b24d3ea,OF2025-GUARANTEE guarantee,event,2025,guarantee,organizational_propagation,42691512000
+event_afcf0569721d,OF2025-LITIGATION litigation_contingency,event,2025,litigation_contingency,compliance,1753282000
+event_885eda252b36,OF2025-PROFIT financial_pressure,event,2025,financial_pressure,profitability,22892000000
+event_aa96c61124d4,OF2025-RATING rating_action,event,2025,rating_action,solvency,
+source_bbe8d130adfa,联合资信：中国中铁股份有限公司2025年跟踪评级报告,source,,,,
+event_2daccdc01f8b,OF2025-SOLVENCY financial_pressure,event,2025,financial_pressure,solvency,
+company_f74e84e69880,中铁隧道局集团有限公司,company,,,,
+event_0c6c5aa23950,EX2026-QCC-TUNNEL-23EXEC execution_case,event,2026,execution_case,liquidity,94580000
+year_78a00f266941,2026,year,,,,
+source_8f0595881ef6,财中社转引企查查,source,,,,
+related_party_0bdfd0dd7e24,天津市滨海新区人民法院；聊城市东昌府区人民法院等,related_party,,,,
+event_8d8877ce56b3,EX2026-QCC-TUNNEL-EXEC execution_case,event,2026,execution_case,liquidity,130000000
+related_party_daa356a6ebfa,多地法院,related_party,,,,
+event_4edef0b12c6d,EX2026-QCC-TUNNEL-PENALTY administrative_penalty,event,2026,administrative_penalty,compliance,4600000
+related_party_7511ffe8f3c9,行政监管部门,related_party,,,,

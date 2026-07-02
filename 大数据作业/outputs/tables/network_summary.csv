@@ -1,0 +1,2 @@
+﻿node_count,edge_count,density_directed,density_undirected,average_weight,official_or_company_edge_share,simulated_edge_share,largest_weak_component_size,largest_strong_component_size
+38,85,0.060455,0.116643,3.7176,0.4353,0.2235,38,30
