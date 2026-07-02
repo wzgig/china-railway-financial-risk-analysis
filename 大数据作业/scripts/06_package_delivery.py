@@ -212,6 +212,7 @@ def main() -> None:
         PROJECT_ROOT / "docs" / "图表目录.md",
         PROJECT_ROOT / "docs" / "结果摘要.md",
         PROJECT_ROOT / "docs" / "数据字典.md",
+        PROJECT_ROOT / "docs" / "任务完成度复盘.md",
         PROJECT_ROOT / "docs" / "视频录制指南.md",
     ]:
         copy_file(source, INFO_DIR / source.name, records)
