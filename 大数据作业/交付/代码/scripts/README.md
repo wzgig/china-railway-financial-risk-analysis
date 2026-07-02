@@ -9,6 +9,7 @@
 | `03_analyze_network.py` | 计算中心性、PageRank、社群、关键路径和阶段摘要 | `nodes.csv`、`edges.csv` | `outputs/tables/network_metrics.csv`、`outputs/tables/key_paths.csv`、`data/processed/stage_summary.csv` |
 | `04_visualize_network.py` | 生成静态图和交互图 | 网络指标、节点表、边表 | `outputs/figures/*.png`、`outputs/network/value_network_interactive.html` |
 | `05_build_report_assets.py` | 汇总图表目录、结果摘要和数据字典说明 | 指标表、图表、数据字典 | `docs/图表目录.md`、`docs/结果摘要.md`、`docs/数据字典.md` |
+| `07_build_report_docx.py` | 以中铁最终版 Word 样式为模板生成本作业 Word 报告 | Markdown 报告、中铁格式化备份版 DOCX、图表 | `paper/协鑫能科算电协同价值创造网络分析报告.docx` |
 | `06_package_delivery.py` | 整理最终交付目录 | 报告、代码、数据、图表、视频指南 | `交付/报告`、`交付/代码`、`交付/数据`、`交付/说明`、`交付/视频` |
 
 建议运行方式：
@@ -21,7 +22,8 @@ python .\scripts\02_build_network_dataset.py
 python .\scripts\03_analyze_network.py
 python .\scripts\04_visualize_network.py
 python .\scripts\05_build_report_assets.py
+python .\scripts\07_build_report_docx.py
 python .\scripts\06_package_delivery.py
 ```
 
-当前已完成 01-06 脚本、第一版网络数据、报告初稿、视频录制指南和交付整理流程。
+当前已完成 01-07 脚本、第一版网络数据、Markdown/Word 报告、视频录制指南和交付整理流程。

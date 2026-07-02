@@ -35,10 +35,11 @@ python .\scripts\02_build_network_dataset.py
 python .\scripts\03_analyze_network.py
 python .\scripts\04_visualize_network.py
 python .\scripts\05_build_report_assets.py
+python .\scripts\07_build_report_docx.py
 python .\scripts\06_package_delivery.py
 ```
 
-运行后会生成公开来源检查、节点表、边表、数据字典、中心性指标、关键路径、阶段摘要、静态网络图、交互 HTML、报告素材说明和最终交付目录。
+运行后会生成公开来源检查、节点表、边表、数据字典、中心性指标、关键路径、阶段摘要、静态网络图、交互 HTML、报告素材说明、Word 报告和最终交付目录。
 
 ## 已生成成果
 
@@ -72,11 +73,12 @@ python .\scripts\06_package_delivery.py
 ### 报告、说明与交付
 
 - `paper/协鑫能科算电协同价值创造网络分析报告.md`：5000-8000 字分析报告初稿，覆盖引言、数据来源与处理、社会网络分析过程、成本管理洞察、动态能力链条、局限性与结论。
+- `paper/协鑫能科算电协同价值创造网络分析报告.docx`：以中国中铁财务风险管理分析最终版 Word 样式为模板生成的 Word 报告。
 - `docs/图表目录.md`：报告图件和交互网络图目录。
 - `docs/结果摘要.md`：关键指标、关键路径、阶段摘要和管理含义。
 - `docs/任务完成度复盘.md`：逐项对照老师要求和提示知识点的完成度检查表。
 - `docs/视频录制指南.md`：3 分钟内场景决策解说视频分镜和口播稿。
-- `交付/`：由 `scripts/06_package_delivery.py` 生成的最终提交包，分为报告、代码、数据、说明、视频五类。
+- `交付/`：由 `scripts/06_package_delivery.py` 生成的最终提交包，分为报告、代码、数据、说明、视频五类，其中 `交付/报告/` 同时包含 Markdown 和 Word 报告。
 
 ## 数据边界说明
 
@@ -95,5 +97,6 @@ python .\scripts\06_package_delivery.py
 - 已完成 `scripts/05_build_report_assets.py`，生成图表目录、结果摘要和数据字典说明。
 - 已完成 `scripts/06_package_delivery.py`，用于整理最终提交包。
 - 已完成报告初稿和视频录制指南。
+- 已完成 `scripts/07_build_report_docx.py`，以中铁最终版 Word 样式为模板生成本作业 Word 报告。
 - 已完成任务完成度复盘，并对报告进行一轮去模板化语言打磨。
 - 下一步可按视频指南录制 3 分钟以内演示视频，并将视频文件放入 `交付/视频/` 后提交课程平台。

@@ -26,7 +26,8 @@ FIGURE_DELIVERY_DIR = INFO_DIR / "图表"
 NETWORK_DELIVERY_DIR = INFO_DIR / "交互网络"
 LOG_DIR = PROJECT_ROOT / "logs"
 
-REPORT_PATH = PROJECT_ROOT / "paper" / "协鑫能科算电协同价值创造网络分析报告.md"
+REPORT_MD_PATH = PROJECT_ROOT / "paper" / "协鑫能科算电协同价值创造网络分析报告.md"
+REPORT_DOCX_PATH = PROJECT_ROOT / "paper" / "协鑫能科算电协同价值创造网络分析报告.docx"
 VIDEO_GUIDE_PATH = PROJECT_ROOT / "docs" / "视频录制指南.md"
 FILE_LIST_PATH = INFO_DIR / "文件清单.md"
 RUN_GUIDE_PATH = INFO_DIR / "运行说明.md"
@@ -100,12 +101,13 @@ def write_run_guide() -> None:
         "python .\\scripts\\03_analyze_network.py",
         "python .\\scripts\\04_visualize_network.py",
         "python .\\scripts\\05_build_report_assets.py",
+        "python .\\scripts\\07_build_report_docx.py",
         "python .\\scripts\\06_package_delivery.py",
         "```",
         "",
         "## 目录说明",
         "",
-        "- `报告/`：分析报告 Markdown 文件。",
+        "- `报告/`：分析报告 Markdown 文件和 Word 文件。",
         "- `代码/`：复现流程需要的 Python 脚本、配置文件和依赖清单。",
         "- `数据/`：节点表、边表、数据字典、阶段摘要、中心性指标表、关键路径表和来源检查表。",
         "- `说明/`：图表目录、结果摘要、数据字典说明、项目 README、数据来源记录和运行说明。",
@@ -186,7 +188,8 @@ def main() -> None:
     ensure_dirs()
     records: list[dict[str, str]] = []
 
-    copy_file(REPORT_PATH, REPORT_DIR / REPORT_PATH.name, records)
+    copy_file(REPORT_MD_PATH, REPORT_DIR / REPORT_MD_PATH.name, records)
+    copy_file(REPORT_DOCX_PATH, REPORT_DIR / REPORT_DOCX_PATH.name, records)
 
     copy_many("scripts/*.py", CODE_DIR / "scripts", records)
     copy_file(PROJECT_ROOT / "scripts" / "README.md", CODE_DIR / "scripts" / "README.md", records)
