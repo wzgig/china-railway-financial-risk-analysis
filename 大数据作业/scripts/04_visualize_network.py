@@ -8,6 +8,9 @@
      outputs/figures/stage_evolution.png，
      outputs/figures/community_network.png，
      outputs/figures/cost_mechanism_mapping.png，
+     outputs/figures/data_type_distribution.png，
+     outputs/figures/evidence_level_distribution.png，
+     outputs/figures/stage_increment_distribution.png，
      outputs/network/value_network_interactive.html
 说明：报告图内部不放标题，标题和解释应写在报告图注中。
 """
@@ -39,6 +42,9 @@ CENTRALITY_PATH = FIGURE_DIR / "centrality_top_nodes.png"
 STAGE_EVOLUTION_PATH = FIGURE_DIR / "stage_evolution.png"
 COMMUNITY_PATH = FIGURE_DIR / "community_network.png"
 COST_MAPPING_PATH = FIGURE_DIR / "cost_mechanism_mapping.png"
+DATA_TYPE_DISTRIBUTION_PATH = FIGURE_DIR / "data_type_distribution.png"
+EVIDENCE_DISTRIBUTION_PATH = FIGURE_DIR / "evidence_level_distribution.png"
+STAGE_INCREMENT_PATH = FIGURE_DIR / "stage_increment_distribution.png"
 INTERACTIVE_PATH = NETWORK_DIR / "value_network_interactive.html"
 
 FONT_FAMILY = "Microsoft YaHei"
@@ -54,6 +60,17 @@ NODE_TYPE_COLORS = {
     "partner": "#7F7F7F",
 }
 
+NODE_TYPE_LABELS = {
+    "company": "公司",
+    "platform": "平台",
+    "resource": "资源",
+    "capability": "能力",
+    "market": "市场",
+    "customer": "客户",
+    "policy": "政策",
+    "partner": "伙伴",
+}
+
 EDGE_TYPE_COLORS = {
     "energy_supply": "#2CA02C",
     "data_flow": "#17BECF",
@@ -62,6 +79,24 @@ EDGE_TYPE_COLORS = {
     "technology_collaboration": "#9467BD",
     "policy_constraint": "#8C564B",
     "value_share": "#D62728",
+}
+
+EDGE_TYPE_LABELS = {
+    "energy_supply": "能源供给",
+    "data_flow": "数据流动",
+    "dispatch": "调度控制",
+    "market_trade": "市场交易",
+    "technology_collaboration": "技术协同",
+    "policy_constraint": "政策约束",
+    "value_share": "价值分配",
+}
+
+EVIDENCE_LABELS = {
+    "official": "官方政策",
+    "company": "公司披露",
+    "industry": "行业逻辑",
+    "media": "媒体公开",
+    "simulated": "结构化模拟",
 }
 
 
@@ -282,6 +317,119 @@ def plot_cost_mapping(edges: pd.DataFrame) -> None:
     save_figure(COST_MAPPING_PATH)
 
 
+def label_counts(series: pd.Series, labels: dict[str, str]) -> pd.DataFrame:
+    counts = series.value_counts().rename_axis("raw_label").reset_index(name="count")
+    counts["label"] = counts["raw_label"].map(labels).fillna(counts["raw_label"])
+    return counts.sort_values("count", ascending=True)
+
+
+def plot_data_type_distribution(nodes: pd.DataFrame, edges: pd.DataFrame) -> None:
+    node_counts = label_counts(nodes["node_type"], NODE_TYPE_LABELS)
+    edge_counts = label_counts(edges["edge_type"], EDGE_TYPE_LABELS)
+
+    fig, axes = plt.subplots(1, 2, figsize=(13, 6.5))
+    axes[0].barh(
+        node_counts["label"],
+        node_counts["count"],
+        color=[NODE_TYPE_COLORS.get(t, "#777777") for t in node_counts["raw_label"]],
+        alpha=0.9,
+    )
+    axes[0].set_xlabel("节点数")
+    axes[0].set_ylabel("")
+    axes[0].grid(axis="x", alpha=0.25)
+    for y, value in enumerate(node_counts["count"]):
+        axes[0].text(value + 0.15, y, str(value), va="center", fontsize=9)
+
+    axes[1].barh(
+        edge_counts["label"],
+        edge_counts["count"],
+        color=[EDGE_TYPE_COLORS.get(t, "#777777") for t in edge_counts["raw_label"]],
+        alpha=0.9,
+    )
+    axes[1].set_xlabel("边数")
+    axes[1].set_ylabel("")
+    axes[1].grid(axis="x", alpha=0.25)
+    for y, value in enumerate(edge_counts["count"]):
+        axes[1].text(value + 0.15, y, str(value), va="center", fontsize=9)
+
+    sns.despine(left=True, bottom=False)
+    save_figure(DATA_TYPE_DISTRIBUTION_PATH)
+
+
+def plot_evidence_distribution(nodes: pd.DataFrame, edges: pd.DataFrame) -> None:
+    evidence = pd.concat(
+        [
+            nodes["evidence_level"].value_counts().rename("节点数"),
+            edges["evidence_level"].value_counts().rename("边数"),
+        ],
+        axis=1,
+    ).fillna(0)
+    evidence = evidence.reindex([key for key in EVIDENCE_LABELS if key in evidence.index]).fillna(0)
+    evidence.index = [EVIDENCE_LABELS.get(value, value) for value in evidence.index]
+
+    ax = evidence.plot(
+        kind="bar",
+        figsize=(11, 6.4),
+        color=["#0072B2", "#D55E00"],
+        alpha=0.88,
+        width=0.72,
+    )
+    ax.set_xlabel("证据等级")
+    ax.set_ylabel("数量")
+    ax.tick_params(axis="x", rotation=0)
+    ax.grid(axis="y", alpha=0.25)
+    for container in ax.containers:
+        ax.bar_label(container, fmt="%.0f", padding=3, fontsize=9)
+    sns.despine(left=False, bottom=False)
+    save_figure(EVIDENCE_DISTRIBUTION_PATH)
+
+
+def plot_stage_increment(stage_summary: pd.DataFrame) -> None:
+    stage_summary = stage_summary.sort_values("stage")
+    x = range(len(stage_summary))
+    width = 0.34
+    fig, ax1 = plt.subplots(figsize=(11, 6.4))
+    ax2 = ax1.twinx()
+
+    bars_node = ax1.bar(
+        [idx - width / 2 for idx in x],
+        stage_summary["new_node_count"],
+        width=width,
+        label="新增节点数",
+        color="#0072B2",
+        alpha=0.86,
+    )
+    bars_edge = ax1.bar(
+        [idx + width / 2 for idx in x],
+        stage_summary["new_edge_count"],
+        width=width,
+        label="新增边数",
+        color="#D55E00",
+        alpha=0.86,
+    )
+    line = ax2.plot(
+        list(x),
+        stage_summary["average_weight"],
+        marker="o",
+        linewidth=2.2,
+        color="#009E73",
+        label="平均边权重",
+    )
+
+    ax1.set_xticks(list(x))
+    ax1.set_xticklabels(stage_summary["stage"])
+    ax1.set_xlabel("阶段")
+    ax1.set_ylabel("新增节点/边数量")
+    ax2.set_ylabel("平均边权重")
+    ax1.grid(axis="y", alpha=0.25)
+    ax1.bar_label(bars_node, fmt="%.0f", padding=3, fontsize=9)
+    ax1.bar_label(bars_edge, fmt="%.0f", padding=3, fontsize=9)
+    handles, labels = ax1.get_legend_handles_labels()
+    line_handles, line_labels = ax2.get_legend_handles_labels()
+    ax1.legend(handles + line_handles, labels + line_labels, loc="upper right", frameon=True)
+    save_figure(STAGE_INCREMENT_PATH)
+
+
 def make_edge_trace(graph: nx.DiGraph, pos: dict[str, tuple[float, float]], edge_type: str, color: str) -> go.Scatter:
     edge_x: list[float | None] = []
     edge_y: list[float | None] = []
@@ -395,6 +543,9 @@ def main() -> None:
     plot_stage_evolution(stage_summary)
     plot_community(graph, metrics)
     plot_cost_mapping(edges)
+    plot_data_type_distribution(nodes, edges)
+    plot_evidence_distribution(nodes, edges)
+    plot_stage_increment(stage_summary)
     plot_interactive(graph, metrics)
 
     print(f"已生成：{OVERVIEW_PATH.relative_to(PROJECT_ROOT)}")
@@ -402,6 +553,9 @@ def main() -> None:
     print(f"已生成：{STAGE_EVOLUTION_PATH.relative_to(PROJECT_ROOT)}")
     print(f"已生成：{COMMUNITY_PATH.relative_to(PROJECT_ROOT)}")
     print(f"已生成：{COST_MAPPING_PATH.relative_to(PROJECT_ROOT)}")
+    print(f"已生成：{DATA_TYPE_DISTRIBUTION_PATH.relative_to(PROJECT_ROOT)}")
+    print(f"已生成：{EVIDENCE_DISTRIBUTION_PATH.relative_to(PROJECT_ROOT)}")
+    print(f"已生成：{STAGE_INCREMENT_PATH.relative_to(PROJECT_ROOT)}")
     print(f"已生成：{INTERACTIVE_PATH.relative_to(PROJECT_ROOT)}")
 
 

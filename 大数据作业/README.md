@@ -68,6 +68,9 @@ python .\scripts\06_package_delivery.py
 - `outputs/figures/stage_evolution.png`：2024-2027 阶段演化图。
 - `outputs/figures/community_network.png`：社群结构网络图。
 - `outputs/figures/cost_mechanism_mapping.png`：成本机制与边类型映射图。
+- `outputs/figures/data_type_distribution.png`：节点类型与边类型分布图。
+- `outputs/figures/evidence_level_distribution.png`：节点与边证据等级分布图。
+- `outputs/figures/stage_increment_distribution.png`：阶段新增节点与边分布图。
 - `outputs/network/value_network_interactive.html`：可用于演示视频的交互网络图。
 
 ### 报告、说明与交付
@@ -93,7 +96,7 @@ python .\scripts\06_package_delivery.py
 - 已评估中铁作业经验的可复用部分。
 - 已建立项目文件夹、数据目录、输出目录、交付目录和基础配置文件。
 - 已完成 `scripts/01_collect_public_sources.py` 至 `scripts/04_visualize_network.py`。
-- 已生成第一版节点表、边表、中心性指标表、关键路径、阶段摘要、静态图和交互网络图。
+- 已生成第一版节点表、边表、中心性指标表、关键路径、阶段摘要、8 张静态图和交互网络图。
 - 已完成 `scripts/05_build_report_assets.py`，生成图表目录、结果摘要和数据字典说明。
 - 已完成 `scripts/06_package_delivery.py`，用于整理最终提交包。
 - 已完成报告初稿和视频录制指南。

@@ -66,6 +66,18 @@ FIGURES = {
         PROJECT_ROOT / "outputs" / "figures" / "cost_mechanism_mapping.png",
         "图5  成本机制与边类型映射图",
     ),
+    "data_type": (
+        PROJECT_ROOT / "outputs" / "figures" / "data_type_distribution.png",
+        "数据图1  节点类型与边类型分布图",
+    ),
+    "evidence": (
+        PROJECT_ROOT / "outputs" / "figures" / "evidence_level_distribution.png",
+        "数据图2  节点与边证据等级分布图",
+    ),
+    "stage_increment": (
+        PROJECT_ROOT / "outputs" / "figures" / "stage_increment_distribution.png",
+        "数据图3  阶段新增节点与边分布图",
+    ),
     "source_vpp": (
         PROJECT_ROOT / "outputs" / "external_images" / "gcl_vpp_platform.png",
         "资料图1  协鑫数字能源虚拟电厂平台界面（来源：协鑫能科官网）",
@@ -348,6 +360,9 @@ def add_title_page(document: Document, title: str, abstract: str, keywords: str)
 def maybe_insert_figure(document: Document, text: str) -> None:
     if text.startswith("协鑫能科（002015）长期从事能源服务"):
         add_figure(document, "source_vpp")
+    elif text.startswith("节点表 nodes.csv 包含"):
+        add_figure(document, "data_type")
+        add_figure(document, "evidence")
     elif text.startswith("整体网络是一个有向加权网络"):
         add_figure(document, "overview")
     elif text.startswith("从中心性指标看"):
@@ -358,6 +373,8 @@ def maybe_insert_figure(document: Document, text: str) -> None:
         add_figure(document, "community")
     elif text.startswith("算电协同市场的核心缺口"):
         add_figure(document, "source_energy_station")
+    elif text.startswith("阶段网络摘要显示"):
+        add_figure(document, "stage_increment")
     elif text.startswith("2027 年累计节点达到"):
         add_figure(document, "stage")
     elif text.startswith("从成本角度看"):
