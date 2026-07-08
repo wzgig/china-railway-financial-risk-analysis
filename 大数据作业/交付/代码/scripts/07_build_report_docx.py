@@ -4,7 +4,8 @@
      生成大数据作业分析报告 DOCX。
 输入：paper/协鑫能科算电协同价值创造网络分析报告.md，
      已完成作业_中国中铁财务风险管理分析/交付/.../中国中铁财务风险管理分析报告（格式化备份版）.docx，
-     outputs/figures/*.png
+     outputs/figures/*.png，
+     outputs/external_images/*.png
 输出：paper/协鑫能科算电协同价值创造网络分析报告.docx，
      outputs/docx/协鑫能科算电协同价值创造网络分析报告.docx，
      logs/07_build_report_docx.log
@@ -64,6 +65,18 @@ FIGURES = {
     "cost": (
         PROJECT_ROOT / "outputs" / "figures" / "cost_mechanism_mapping.png",
         "图5  成本机制与边类型映射图",
+    ),
+    "source_vpp": (
+        PROJECT_ROOT / "outputs" / "external_images" / "gcl_vpp_platform.png",
+        "资料图1  协鑫数字能源虚拟电厂平台界面（来源：协鑫能科官网）",
+    ),
+    "source_ai_center": (
+        PROJECT_ROOT / "outputs" / "external_images" / "gcl_ai_computing_center.png",
+        "资料图2  协鑫智算（上海）中心揭牌现场（来源：协鑫能科官网）",
+    ),
+    "source_energy_station": (
+        PROJECT_ROOT / "outputs" / "external_images" / "gcl_energy_storage_station.png",
+        "资料图3  协鑫光储超充一体化综合能源站（来源：协鑫能科官网）",
     ),
 }
 
@@ -333,12 +346,18 @@ def add_title_page(document: Document, title: str, abstract: str, keywords: str)
 
 
 def maybe_insert_figure(document: Document, text: str) -> None:
-    if text.startswith("整体网络是一个有向加权网络"):
+    if text.startswith("协鑫能科（002015）长期从事能源服务"):
+        add_figure(document, "source_vpp")
+    elif text.startswith("整体网络是一个有向加权网络"):
         add_figure(document, "overview")
     elif text.startswith("从中心性指标看"):
         add_figure(document, "centrality")
+    elif text.startswith("从客户场景看"):
+        add_figure(document, "source_ai_center")
     elif text.startswith("社群结构可以分为"):
         add_figure(document, "community")
+    elif text.startswith("算电协同市场的核心缺口"):
+        add_figure(document, "source_energy_station")
     elif text.startswith("2027 年累计节点达到"):
         add_figure(document, "stage")
     elif text.startswith("从成本角度看"):

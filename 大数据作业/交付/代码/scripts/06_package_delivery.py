@@ -23,6 +23,7 @@ INFO_DIR = DELIVERY_DIR / "说明"
 VIDEO_DIR = DELIVERY_DIR / "视频"
 VIDEO_ASSET_DIR = VIDEO_DIR / "演示素材"
 FIGURE_DELIVERY_DIR = INFO_DIR / "图表"
+EXTERNAL_IMAGE_DELIVERY_DIR = INFO_DIR / "网上图片"
 NETWORK_DELIVERY_DIR = INFO_DIR / "交互网络"
 LOG_DIR = PROJECT_ROOT / "logs"
 
@@ -50,6 +51,7 @@ def ensure_dirs() -> None:
         VIDEO_DIR,
         VIDEO_ASSET_DIR,
         FIGURE_DELIVERY_DIR,
+        EXTERNAL_IMAGE_DELIVERY_DIR,
         NETWORK_DELIVERY_DIR,
         LOG_DIR,
     ]:
@@ -112,6 +114,7 @@ def write_run_guide() -> None:
         "- `数据/`：节点表、边表、数据字典、阶段摘要、中心性指标表、关键路径表和来源检查表。",
         "- `说明/`：图表目录、结果摘要、数据字典说明、项目 README、数据来源记录和运行说明。",
         "- `说明/图表/`：报告可插入的 PNG 图件。",
+        "- `说明/网上图片/`：报告新增的网上官方图片素材及来源清单。",
         "- `说明/交互网络/`：交互 HTML 网络图。",
         "- `视频/`：3 分钟解说视频录制指南和演示素材。实际视频文件如 `.mp4` 按根目录 `.gitignore` 规则保留本地，不提交 Git。",
         "",
@@ -202,6 +205,7 @@ def main() -> None:
     copy_many("outputs/tables/*.csv", DATA_DIR / "tables", records)
 
     copy_many("outputs/figures/*.png", FIGURE_DELIVERY_DIR, records)
+    copy_many("outputs/external_images/*", EXTERNAL_IMAGE_DELIVERY_DIR, records)
     copy_many("outputs/network/*.html", NETWORK_DELIVERY_DIR, records)
     copy_many("outputs/figures/*.png", VIDEO_ASSET_DIR, records)
     copy_many("outputs/network/*.html", VIDEO_ASSET_DIR, records)
